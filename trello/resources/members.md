@@ -13,8 +13,8 @@ Total: 33 endpoints
 **Description:** Get a member
 
 **Functions:**
-- **Bash:** `trello_get_member`
-- **PowerShell:** `Invoke-TrelloGetMember`
+- **Bash:** `get_member`
+- **PowerShell:** `Invoke-GetMember`
 
 **Parameters:**
 
@@ -53,8 +53,8 @@ Total: 33 endpoints
 **Description:** List the actions for a member
 
 **Functions:**
-- **Bash:** `trello_get_members_actions`
-- **PowerShell:** `Invoke-TrelloGetMembersActions`
+- **Bash:** `get_members_actions`
+- **PowerShell:** `Invoke-GetMembersActions`
 
 **Parameters:**
 
@@ -74,8 +74,8 @@ Total: 33 endpoints
 **Description:** Get a member's custom board backgrounds
 
 **Functions:**
-- **Bash:** `trello_get_board_backgrounds`
-- **PowerShell:** `Invoke-TrelloGetBoardBackgrounds`
+- **Bash:** `get_board_backgrounds`
+- **PowerShell:** `Invoke-GetBoardBackgrounds`
 
 **Parameters:**
 
@@ -95,8 +95,8 @@ Total: 33 endpoints
 **Description:** Get a member's board background
 
 **Functions:**
-- **Bash:** `trello_get_boardbackground_member`
-- **PowerShell:** `Invoke-TrelloGetBoardbackgroundMember`
+- **Bash:** `get_boardbackground_member`
+- **PowerShell:** `Invoke-GetBoardbackgroundMember`
 
 **Parameters:**
 
@@ -115,8 +115,8 @@ Total: 33 endpoints
 **Description:** List a member's board stars
 
 **Functions:**
-- **Bash:** `trello_get_members_boardstars`
-- **PowerShell:** `Invoke-TrelloGetMembersBoardstars`
+- **Bash:** `get_members_boardstars`
+- **PowerShell:** `Invoke-GetMembersBoardstars`
 
 **Parameters:**
 
@@ -135,8 +135,8 @@ Total: 33 endpoints
 **Description:** Get a specific boardStar
 
 **Functions:**
-- **Bash:** `trello_get_boardstar_member`
-- **PowerShell:** `Invoke-TrelloGetBoardstarMember`
+- **Bash:** `get_boardstar_member`
+- **PowerShell:** `Invoke-GetBoardstarMember`
 
 ---
 
@@ -149,8 +149,8 @@ Total: 33 endpoints
 **Description:** Lists the boards that the user is a member of.
 
 **Functions:**
-- **Bash:** `trello_get_boards_that_member_belongs_to`
-- **PowerShell:** `Invoke-TrelloGetBoardsThatMemberBelongsTo`
+- **Bash:** `get_boards_that_member_belongs_to`
+- **PowerShell:** `Invoke-GetBoardsThatMemberBelongsTo`
 
 **Parameters:**
 
@@ -174,8 +174,8 @@ Total: 33 endpoints
 **Description:** Get the boards the member has been invited to
 
 **Functions:**
-- **Bash:** `trello_get_boards_member_has_been_invited_to`
-- **PowerShell:** `Invoke-TrelloGetBoardsMemberHasBeenInvitedTo`
+- **Bash:** `get_boards_member_has_been_invited_to`
+- **PowerShell:** `Invoke-GetBoardsMemberHasBeenInvitedTo`
 
 **Parameters:**
 
@@ -195,8 +195,8 @@ Total: 33 endpoints
 **Description:** Gets the cards a member is on
 
 **Functions:**
-- **Bash:** `trello_get_cards_member_is_on`
-- **PowerShell:** `Invoke-TrelloGetCardsMemberIsOn`
+- **Bash:** `get_cards_member_is_on`
+- **PowerShell:** `Invoke-GetCardsMemberIsOn`
 
 **Parameters:**
 
@@ -216,8 +216,8 @@ Total: 33 endpoints
 **Description:** Get a member's notifications
 
 **Functions:**
-- **Bash:** `trello_get_members_notifications`
-- **PowerShell:** `Invoke-TrelloGetMembersNotifications`
+- **Bash:** `get_members_notifications`
+- **PowerShell:** `Invoke-GetMembersNotifications`
 
 **Parameters:**
 
@@ -247,8 +247,8 @@ Total: 33 endpoints
 **Description:** Get a member's notification channel settings
 
 **Functions:**
-- **Bash:** `trello_get_members_notification_channel_settings`
-- **PowerShell:** `Invoke-TrelloGetMembersNotificationChannelSettings`
+- **Bash:** `get_members_notification_channel_settings`
+- **PowerShell:** `Invoke-GetMembersNotificationChannelSettings`
 
 ---
 
@@ -261,8 +261,8 @@ Total: 33 endpoints
 **Description:** Get blocked notification keys of Member on a specific channel
 
 **Functions:**
-- **Bash:** `trello_get_blocked_notification_keys_member_on_this_channel`
-- **PowerShell:** `Invoke-TrelloGetBlockedNotificationKeysMemberOnThisChannel`
+- **Bash:** `get_blocked_notification_keys_member_on_this_channel`
+- **PowerShell:** `Invoke-GetBlockedNotificationKeysMemberOnThisChannel`
 
 ---
 
@@ -275,8 +275,8 @@ Total: 33 endpoints
 **Description:** Get a member's Workspaces
 
 **Functions:**
-- **Bash:** `trello_get_members_organizations`
-- **PowerShell:** `Invoke-TrelloGetMembersOrganizations`
+- **Bash:** `get_members_organizations`
+- **PowerShell:** `Invoke-GetMembersOrganizations`
 
 **Parameters:**
 
@@ -298,8 +298,8 @@ Total: 33 endpoints
 **Description:** Get a member's Workspaces they have been invited to
 
 **Functions:**
-- **Bash:** `trello_get_organizations_member_has_been_invited_to`
-- **PowerShell:** `Invoke-TrelloGetOrganizationsMemberHasBeenInvitedTo`
+- **Bash:** `get_organizations_member_has_been_invited_to`
+- **PowerShell:** `Invoke-GetOrganizationsMemberHasBeenInvitedTo`
 
 **Parameters:**
 
@@ -319,8 +319,8 @@ Total: 33 endpoints
 **Description:** List the saved searches of a Member
 
 **Functions:**
-- **Bash:** `trello_get_members_saved_searched`
-- **PowerShell:** `Invoke-TrelloGetMembersSavedSearched`
+- **Bash:** `get_members_saved_searched`
+- **PowerShell:** `Invoke-GetMembersSavedSearched`
 
 ---
 
@@ -331,8 +331,8 @@ Total: 33 endpoints
 **Endpoint:** `GET /members/{id}/savedSearches/{idSearch}`
 
 **Functions:**
-- **Bash:** `trello_get_saved_search`
-- **PowerShell:** `Invoke-TrelloGetSavedSearch`
+- **Bash:** `get_saved_search`
+- **PowerShell:** `Invoke-GetSavedSearch`
 
 ---
 
@@ -345,8 +345,8 @@ Total: 33 endpoints
 **Description:** List a members app tokens
 
 **Functions:**
-- **Bash:** `trello_get_members_tokens`
-- **PowerShell:** `Invoke-TrelloGetMembersTokens`
+- **Bash:** `get_members_tokens`
+- **PowerShell:** `Invoke-GetMembersTokens`
 
 **Parameters:**
 
@@ -366,8 +366,8 @@ Total: 33 endpoints
 **Description:** Get a particular property of a member
 
 **Functions:**
-- **Bash:** `trello_get_field_on_member`
-- **PowerShell:** `Invoke-TrelloGetFieldOnMember`
+- **Bash:** `get_field_on_member`
+- **PowerShell:** `Invoke-GetFieldOnMember`
 
 **Parameters:**
 
@@ -389,8 +389,8 @@ Total: 33 endpoints
 **Description:** Create a new avatar for a member
 
 **Functions:**
-- **Bash:** `trello_create_avatar_for_member`
-- **PowerShell:** `Invoke-TrelloCreateAvatarForMember`
+- **Bash:** `create_avatar_for_member`
+- **PowerShell:** `Invoke-CreateAvatarForMember`
 
 **Parameters:**
 
@@ -410,8 +410,8 @@ Total: 33 endpoints
 **Description:** Upload a new boardBackground
 
 **Functions:**
-- **Bash:** `trello_upload_new_boardbackground_for_member`
-- **PowerShell:** `Invoke-TrelloUploadNewBoardbackgroundForMember`
+- **Bash:** `upload_new_boardbackground_for_member`
+- **PowerShell:** `Invoke-UploadNewBoardbackgroundForMember`
 
 **Parameters:**
 
@@ -431,8 +431,8 @@ Total: 33 endpoints
 **Description:** Star a new board on behalf of a Member
 
 **Functions:**
-- **Bash:** `trello_create_star_for_board`
-- **PowerShell:** `Invoke-TrelloCreateStarForBoard`
+- **Bash:** `create_star_for_board`
+- **PowerShell:** `Invoke-CreateStarForBoard`
 
 **Parameters:**
 
@@ -453,8 +453,8 @@ Total: 33 endpoints
 **Description:** Dismiss a message
 
 **Functions:**
-- **Bash:** `trello_dismiss_message_for_member`
-- **PowerShell:** `Invoke-TrelloDismissMessageForMember`
+- **Bash:** `dismiss_message_for_member`
+- **PowerShell:** `Invoke-DismissMessageForMember`
 
 **Parameters:**
 
@@ -474,8 +474,8 @@ Total: 33 endpoints
 **Description:** Create a saved search
 
 **Functions:**
-- **Bash:** `trello_create_saved_search_for_member`
-- **PowerShell:** `Invoke-TrelloCreateSavedSearchForMember`
+- **Bash:** `create_saved_search_for_member`
+- **PowerShell:** `Invoke-CreateSavedSearchForMember`
 
 **Parameters:**
 
@@ -496,8 +496,8 @@ Total: 33 endpoints
 **Endpoint:** `PUT /members/{id}`
 
 **Functions:**
-- **Bash:** `trello_update_member`
-- **PowerShell:** `Invoke-TrelloUpdateMember`
+- **Bash:** `update_member`
+- **PowerShell:** `Invoke-UpdateMember`
 
 **Parameters:**
 
@@ -524,8 +524,8 @@ Total: 33 endpoints
 **Description:** Update a board background
 
 **Functions:**
-- **Bash:** `trello_update_members_custom_board_background`
-- **PowerShell:** `Invoke-TrelloUpdateMembersCustomBoardBackground`
+- **Bash:** `update_members_custom_board_background`
+- **PowerShell:** `Invoke-UpdateMembersCustomBoardBackground`
 
 **Parameters:**
 
@@ -545,8 +545,8 @@ Total: 33 endpoints
 **Description:** Update the position of a starred board
 
 **Functions:**
-- **Bash:** `trello_update_position_boardstar_member`
-- **PowerShell:** `Invoke-TrelloUpdatePositionBoardstarMember`
+- **Bash:** `update_position_boardstar_member`
+- **PowerShell:** `Invoke-UpdatePositionBoardstarMember`
 
 **Parameters:**
 
@@ -565,8 +565,8 @@ Total: 33 endpoints
 **Description:** Update blocked notification keys of Member on a specific channel
 
 **Functions:**
-- **Bash:** `trello_update_blocked_notification_keys_member`
-- **PowerShell:** `Invoke-TrelloUpdateBlockedNotificationKeysMember`
+- **Bash:** `update_blocked_notification_keys_member`
+- **PowerShell:** `Invoke-UpdateBlockedNotificationKeysMember`
 
 ---
 
@@ -579,8 +579,8 @@ Total: 33 endpoints
 **Description:** Update blocked notification keys of Member on a specific channel
 
 **Functions:**
-- **Bash:** `trello_update_blocked_notification_keys_member_channel`
-- **PowerShell:** `Invoke-TrelloUpdateBlockedNotificationKeysMemberChannel`
+- **Bash:** `update_blocked_notification_keys_member_channel`
+- **PowerShell:** `Invoke-UpdateBlockedNotificationKeysMemberChannel`
 
 ---
 
@@ -593,8 +593,8 @@ Total: 33 endpoints
 **Description:** Update blocked notification keys of Member on a specific channel
 
 **Functions:**
-- **Bash:** `trello_update_blocked_notification_keys_member_on_channel`
-- **PowerShell:** `Invoke-TrelloUpdateBlockedNotificationKeysMemberOnChannel`
+- **Bash:** `update_blocked_notification_keys_member_on_channel`
+- **PowerShell:** `Invoke-UpdateBlockedNotificationKeysMemberOnChannel`
 
 ---
 
@@ -605,8 +605,8 @@ Total: 33 endpoints
 **Endpoint:** `PUT /members/{id}/savedSearches/{idSearch}`
 
 **Functions:**
-- **Bash:** `trello_update_saved_search`
-- **PowerShell:** `Invoke-TrelloUpdateSavedSearch`
+- **Bash:** `update_saved_search`
+- **PowerShell:** `Invoke-UpdateSavedSearch`
 
 **Parameters:**
 
@@ -629,8 +629,8 @@ Total: 33 endpoints
 **Description:** Delete a board background
 
 **Functions:**
-- **Bash:** `trello_delete_members_custom_board_background`
-- **PowerShell:** `Invoke-TrelloDeleteMembersCustomBoardBackground`
+- **Bash:** `delete_members_custom_board_background`
+- **PowerShell:** `Invoke-DeleteMembersCustomBoardBackground`
 
 ---
 
@@ -643,8 +643,8 @@ Total: 33 endpoints
 **Description:** Unstar a board
 
 **Functions:**
-- **Bash:** `trello_delete_star_for_board`
-- **PowerShell:** `Invoke-TrelloDeleteStarForBoard`
+- **Bash:** `delete_star_for_board`
+- **PowerShell:** `Invoke-DeleteStarForBoard`
 
 ---
 
@@ -655,7 +655,7 @@ Total: 33 endpoints
 **Endpoint:** `DELETE /members/{id}/savedSearches/{idSearch}`
 
 **Functions:**
-- **Bash:** `trello_delete_saved_search`
-- **PowerShell:** `Invoke-TrelloDeleteSavedSearch`
+- **Bash:** `delete_saved_search`
+- **PowerShell:** `Invoke-DeleteSavedSearch`
 
 ---

@@ -9,8 +9,8 @@
 # Examples:
 #   $env:TRELLO_API_KEY = "your_key"
 #   $env:TRELLO_TOKEN = "your_token"
-#   Invoke-TrelloGetAction -Id abc123
-#   Invoke-TrelloCreateCard -IdList xyz -Name "My Card"
+#   Invoke-GetAction -Id abc123
+#   Invoke-CreateNewCard -IdList xyz -Name "My Card"
 
 $ErrorActionPreference = 'Stop'
 
@@ -301,7 +301,7 @@ function Invoke-TrelloRequest {
 # ENDPOINT FUNCTIONS
 # ============================================================================
 
-function Invoke-TrelloGetApplicationsComplianceData {
+function Invoke-GetApplicationsComplianceData {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -319,7 +319,7 @@ function Invoke-TrelloGetApplicationsComplianceData {
     Invoke-TrelloRequest -Method GET -Path '/applications/{key}/compliance' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetChecklistsOnBoard {
+function Invoke-GetChecklistsOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -337,7 +337,7 @@ function Invoke-TrelloGetChecklistsOnBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/checklists' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloRemoveMemberFromBoard {
+function Invoke-RemoveMemberFromBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -355,7 +355,7 @@ function Invoke-TrelloRemoveMemberFromBoard {
     Invoke-TrelloRequest -Method DELETE -Path '/boards/{id}/members/{idMember}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloAddMemberVoteToCard {
+function Invoke-AddMemberVoteToCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -373,7 +373,7 @@ function Invoke-TrelloAddMemberVoteToCard {
     Invoke-TrelloRequest -Method POST -Path '/cards/{id}/membersVoted' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteAction {
+function Invoke-DeleteAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -391,7 +391,7 @@ function Invoke-TrelloDeleteAction {
     Invoke-TrelloRequest -Method DELETE -Path '/actions/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteActionsReaction {
+function Invoke-DeleteActionsReaction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -409,7 +409,7 @@ function Invoke-TrelloDeleteActionsReaction {
     Invoke-TrelloRequest -Method DELETE -Path '/actions/{idAction}/reactions/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteBoard {
+function Invoke-DeleteBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -427,7 +427,7 @@ function Invoke-TrelloDeleteBoard {
     Invoke-TrelloRequest -Method DELETE -Path '/boards/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDisablePowerupOnBoard {
+function Invoke-DisablePowerupOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -445,7 +445,7 @@ function Invoke-TrelloDisablePowerupOnBoard {
     Invoke-TrelloRequest -Method DELETE -Path '/boards/{id}/boardPlugins/{idPlugin}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteCard {
+function Invoke-DeleteCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -463,7 +463,7 @@ function Invoke-TrelloDeleteCard {
     Invoke-TrelloRequest -Method DELETE -Path '/cards/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteCommentOnCard {
+function Invoke-DeleteCommentOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -481,7 +481,7 @@ function Invoke-TrelloDeleteCommentOnCard {
     Invoke-TrelloRequest -Method DELETE -Path '/cards/{id}/actions/{idAction}/comments' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteCheckitemOnCard {
+function Invoke-DeleteCheckitemOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -499,7 +499,7 @@ function Invoke-TrelloDeleteCheckitemOnCard {
     Invoke-TrelloRequest -Method DELETE -Path '/cards/{id}/checkItem/{idCheckItem}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteChecklistOnCard {
+function Invoke-DeleteChecklistOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -517,7 +517,7 @@ function Invoke-TrelloDeleteChecklistOnCard {
     Invoke-TrelloRequest -Method DELETE -Path '/cards/{id}/checklists/{idChecklist}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloRemoveLabelFromCard {
+function Invoke-RemoveLabelFromCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -535,7 +535,7 @@ function Invoke-TrelloRemoveLabelFromCard {
     Invoke-TrelloRequest -Method DELETE -Path '/cards/{id}/idLabels/{idLabel}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloRemoveMembersVoteOnCard {
+function Invoke-RemoveMembersVoteOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -553,7 +553,7 @@ function Invoke-TrelloRemoveMembersVoteOnCard {
     Invoke-TrelloRequest -Method DELETE -Path '/cards/{id}/membersVoted/{idMember}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteStickerOnCard {
+function Invoke-DeleteStickerOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -571,7 +571,7 @@ function Invoke-TrelloDeleteStickerOnCard {
     Invoke-TrelloRequest -Method DELETE -Path '/cards/{id}/stickers/{idSticker}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteChecklist {
+function Invoke-DeleteChecklist {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -589,7 +589,7 @@ function Invoke-TrelloDeleteChecklist {
     Invoke-TrelloRequest -Method DELETE -Path '/checklists/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteCheckitemFromChecklist {
+function Invoke-DeleteCheckitemFromChecklist {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -607,7 +607,7 @@ function Invoke-TrelloDeleteCheckitemFromChecklist {
     Invoke-TrelloRequest -Method DELETE -Path '/checklists/{id}/checkItems/{idCheckItem}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteCustomFieldDefinition {
+function Invoke-DeleteCustomFieldDefinition {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -625,7 +625,7 @@ function Invoke-TrelloDeleteCustomFieldDefinition {
     Invoke-TrelloRequest -Method DELETE -Path '/customFields/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteOptionCustomFieldDropdown {
+function Invoke-DeleteOptionCustomFieldDropdown {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -643,7 +643,7 @@ function Invoke-TrelloDeleteOptionCustomFieldDropdown {
     Invoke-TrelloRequest -Method DELETE -Path '/customFields/{id}/options/{idCustomFieldOption}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteOrganizationFromEnterprise {
+function Invoke-DeleteOrganizationFromEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -661,7 +661,7 @@ function Invoke-TrelloDeleteOrganizationFromEnterprise {
     Invoke-TrelloRequest -Method DELETE -Path '/enterprises/{id}/organizations/{idOrg}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloRemoveMemberFromCard {
+function Invoke-RemoveMemberFromCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -679,7 +679,7 @@ function Invoke-TrelloRemoveMemberFromCard {
     Invoke-TrelloRequest -Method DELETE -Path '/cards/{id}/idMembers/{idMember}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteLabel {
+function Invoke-DeleteLabel {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -697,7 +697,7 @@ function Invoke-TrelloDeleteLabel {
     Invoke-TrelloRequest -Method DELETE -Path '/labels/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteMembersCustomBoardBackground {
+function Invoke-DeleteMembersCustomBoardBackground {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -715,7 +715,7 @@ function Invoke-TrelloDeleteMembersCustomBoardBackground {
     Invoke-TrelloRequest -Method DELETE -Path '/members/{id}/boardBackgrounds/{idBackground}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteStarForBoard {
+function Invoke-DeleteStarForBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -733,7 +733,7 @@ function Invoke-TrelloDeleteStarForBoard {
     Invoke-TrelloRequest -Method DELETE -Path '/members/{id}/boardStars/{idStar}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteCustomBoardBackgroundMember {
+function Invoke-DeleteCustomBoardBackgroundMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -751,7 +751,7 @@ function Invoke-TrelloDeleteCustomBoardBackgroundMember {
     Invoke-TrelloRequest -Method DELETE -Path '/members/{id}/customBoardBackgrounds/{idBackground}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteMembersCustomSticker {
+function Invoke-DeleteMembersCustomSticker {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -769,7 +769,7 @@ function Invoke-TrelloDeleteMembersCustomSticker {
     Invoke-TrelloRequest -Method DELETE -Path '/members/{id}/customStickers/{idSticker}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteSavedSearch {
+function Invoke-DeleteSavedSearch {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -787,7 +787,7 @@ function Invoke-TrelloDeleteSavedSearch {
     Invoke-TrelloRequest -Method DELETE -Path '/members/{id}/savedSearches/{idSearch}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteOrganization {
+function Invoke-DeleteOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -805,7 +805,7 @@ function Invoke-TrelloDeleteOrganization {
     Invoke-TrelloRequest -Method DELETE -Path '/organizations/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteLogoForOrganization {
+function Invoke-DeleteLogoForOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -823,7 +823,7 @@ function Invoke-TrelloDeleteLogoForOrganization {
     Invoke-TrelloRequest -Method DELETE -Path '/organizations/{id}/logo' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloRemoveMemberFromOrganization {
+function Invoke-RemoveMemberFromOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -841,7 +841,7 @@ function Invoke-TrelloRemoveMemberFromOrganization {
     Invoke-TrelloRequest -Method DELETE -Path '/organizations/{id}/members/{idMember}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloRemoveAssociatedGoogleAppsDomainFromWorkspace {
+function Invoke-RemoveAssociatedGoogleAppsDomainFromWorkspace {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -859,7 +859,7 @@ function Invoke-TrelloRemoveAssociatedGoogleAppsDomainFromWorkspace {
     Invoke-TrelloRequest -Method DELETE -Path '/organizations/{id}/prefs/associatedDomain' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteEmailDomainRestrictionOnWhoCanBeInvitedToWorkspace {
+function Invoke-DeleteEmailDomainRestrictionOnWhoCanBeInvitedToWorkspace {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -877,7 +877,7 @@ function Invoke-TrelloDeleteEmailDomainRestrictionOnWhoCanBeInvitedToWorkspace {
     Invoke-TrelloRequest -Method DELETE -Path '/organizations/{id}/prefs/orgInviteRestrict' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteOrganizationsTag {
+function Invoke-DeleteOrganizationsTag {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -895,7 +895,7 @@ function Invoke-TrelloDeleteOrganizationsTag {
     Invoke-TrelloRequest -Method DELETE -Path '/organizations/{id}/tags/{idTag}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteToken {
+function Invoke-DeleteToken {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -913,7 +913,7 @@ function Invoke-TrelloDeleteToken {
     Invoke-TrelloRequest -Method DELETE -Path '/tokens/{token}/' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteWebhookCreatedByToken {
+function Invoke-DeleteWebhookCreatedByToken {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -931,7 +931,7 @@ function Invoke-TrelloDeleteWebhookCreatedByToken {
     Invoke-TrelloRequest -Method DELETE -Path '/tokens/{token}/webhooks/{idWebhook}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteWebhook {
+function Invoke-DeleteWebhook {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -949,7 +949,7 @@ function Invoke-TrelloDeleteWebhook {
     Invoke-TrelloRequest -Method DELETE -Path '/webhooks/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeleteAttachmentOnCard {
+function Invoke-DeleteAttachmentOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -967,7 +967,7 @@ function Invoke-TrelloDeleteAttachmentOnCard {
     Invoke-TrelloRequest -Method DELETE -Path '/cards/{id}/attachments/{idAttachment}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloListAvailableEmoji {
+function Invoke-ListAvailableEmoji {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -985,7 +985,7 @@ function Invoke-TrelloListAvailableEmoji {
     Invoke-TrelloRequest -Method GET -Path '/emoji' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeactivateMemberEnterprise {
+function Invoke-DeactivateMemberEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1003,7 +1003,7 @@ function Invoke-TrelloDeactivateMemberEnterprise {
     Invoke-TrelloRequest -Method PUT -Path '/enterprises/{id}/members/{idMember}/deactivated' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloRemoveMemberAsAdminFromEnterprise {
+function Invoke-RemoveMemberAsAdminFromEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1021,7 +1021,7 @@ function Invoke-TrelloRemoveMemberAsAdminFromEnterprise {
     Invoke-TrelloRequest -Method DELETE -Path '/enterprises/{id}/admins/{idMember}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetAction {
+function Invoke-GetAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1039,7 +1039,7 @@ function Invoke-TrelloGetAction {
     Invoke-TrelloRequest -Method GET -Path '/actions/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardForAction {
+function Invoke-GetBoardForAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1057,7 +1057,7 @@ function Invoke-TrelloGetBoardForAction {
     Invoke-TrelloRequest -Method GET -Path '/actions/{id}/board' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCardForAction {
+function Invoke-GetCardForAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1075,7 +1075,7 @@ function Invoke-TrelloGetCardForAction {
     Invoke-TrelloRequest -Method GET -Path '/actions/{id}/card' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetSpecificFieldOnAction {
+function Invoke-GetSpecificFieldOnAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1093,7 +1093,7 @@ function Invoke-TrelloGetSpecificFieldOnAction {
     Invoke-TrelloRequest -Method GET -Path '/actions/{id}/{field}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetListForAction {
+function Invoke-GetListForAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1111,7 +1111,7 @@ function Invoke-TrelloGetListForAction {
     Invoke-TrelloRequest -Method GET -Path '/actions/{id}/list' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMemberAction {
+function Invoke-GetMemberAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1129,7 +1129,7 @@ function Invoke-TrelloGetMemberAction {
     Invoke-TrelloRequest -Method GET -Path '/actions/{id}/member' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMemberCreatorAction {
+function Invoke-GetMemberCreatorAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1147,7 +1147,7 @@ function Invoke-TrelloGetMemberCreatorAction {
     Invoke-TrelloRequest -Method GET -Path '/actions/{id}/memberCreator' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetOrganizationAction {
+function Invoke-GetOrganizationAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1165,7 +1165,7 @@ function Invoke-TrelloGetOrganizationAction {
     Invoke-TrelloRequest -Method GET -Path '/actions/{id}/organization' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetActionsReactions {
+function Invoke-GetActionsReactions {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1183,7 +1183,7 @@ function Invoke-TrelloGetActionsReactions {
     Invoke-TrelloRequest -Method GET -Path '/actions/{idAction}/reactions' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetActionsReaction {
+function Invoke-GetActionsReaction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1201,7 +1201,7 @@ function Invoke-TrelloGetActionsReaction {
     Invoke-TrelloRequest -Method GET -Path '/actions/{idAction}/reactions/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloListActionsSummaryReactions {
+function Invoke-ListActionsSummaryReactions {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1219,7 +1219,7 @@ function Invoke-TrelloListActionsSummaryReactions {
     Invoke-TrelloRequest -Method GET -Path '/actions/{idAction}/reactionsSummary' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloBatchRequests {
+function Invoke-BatchRequests {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1237,7 +1237,7 @@ function Invoke-TrelloBatchRequests {
     Invoke-TrelloRequest -Method GET -Path '/batch' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetPowerupsOnBoard {
+function Invoke-GetPowerupsOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1255,7 +1255,7 @@ function Invoke-TrelloGetPowerupsOnBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/plugins' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoard {
+function Invoke-GetBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1273,7 +1273,7 @@ function Invoke-TrelloGetBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetActionsBoard {
+function Invoke-GetActionsBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1291,7 +1291,7 @@ function Invoke-TrelloGetActionsBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{boardId}/actions' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetEnabledPowerupsOnBoard {
+function Invoke-GetEnabledPowerupsOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1309,7 +1309,7 @@ function Invoke-TrelloGetEnabledPowerupsOnBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/boardPlugins' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardstarsOnBoard {
+function Invoke-GetBoardstarsOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1327,7 +1327,7 @@ function Invoke-TrelloGetBoardstarsOnBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{boardId}/boardStars' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCardsOnBoard {
+function Invoke-GetCardsOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1345,7 +1345,7 @@ function Invoke-TrelloGetCardsOnBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/cards' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetFilteredCardsOnBoard {
+function Invoke-GetFilteredCardsOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1363,7 +1363,7 @@ function Invoke-TrelloGetFilteredCardsOnBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/cards/{filter}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCustomFieldsForBoard {
+function Invoke-GetCustomFieldsForBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1381,7 +1381,7 @@ function Invoke-TrelloGetCustomFieldsForBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/customFields' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetFieldOnBoard {
+function Invoke-GetFieldOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1399,7 +1399,7 @@ function Invoke-TrelloGetFieldOnBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/{field}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetLabelsOnBoard {
+function Invoke-GetLabelsOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1417,7 +1417,7 @@ function Invoke-TrelloGetLabelsOnBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/labels' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetListsOnBoard {
+function Invoke-GetListsOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1435,7 +1435,7 @@ function Invoke-TrelloGetListsOnBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/lists' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetFilteredListsOnBoard {
+function Invoke-GetFilteredListsOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1453,7 +1453,7 @@ function Invoke-TrelloGetFilteredListsOnBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/lists/{filter}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersBoard {
+function Invoke-GetMembersBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1471,7 +1471,7 @@ function Invoke-TrelloGetMembersBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/members' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembershipsBoard {
+function Invoke-GetMembershipsBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1489,7 +1489,7 @@ function Invoke-TrelloGetMembershipsBoard {
     Invoke-TrelloRequest -Method GET -Path '/boards/{id}/memberships' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCard {
+function Invoke-GetCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1507,7 +1507,7 @@ function Invoke-TrelloGetCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetActionsOnCard {
+function Invoke-GetActionsOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1525,7 +1525,7 @@ function Invoke-TrelloGetActionsOnCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/actions' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetAttachmentsOnCard {
+function Invoke-GetAttachmentsOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1543,7 +1543,7 @@ function Invoke-TrelloGetAttachmentsOnCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/attachments' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetAttachmentOnCard {
+function Invoke-GetAttachmentOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1561,7 +1561,7 @@ function Invoke-TrelloGetAttachmentOnCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/attachments/{idAttachment}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardCardIsOn {
+function Invoke-GetBoardCardIsOn {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1579,7 +1579,7 @@ function Invoke-TrelloGetBoardCardIsOn {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/board' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCheckitemOnCard {
+function Invoke-GetCheckitemOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1597,7 +1597,7 @@ function Invoke-TrelloGetCheckitemOnCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/checkItem/{idCheckItem}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCheckitemsOnCard {
+function Invoke-GetCheckitemsOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1615,7 +1615,7 @@ function Invoke-TrelloGetCheckitemsOnCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/checkItemStates' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetChecklistsOnCard {
+function Invoke-GetChecklistsOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1633,7 +1633,7 @@ function Invoke-TrelloGetChecklistsOnCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/checklists' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCustomFieldItemsForCard {
+function Invoke-GetCustomFieldItemsForCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1651,7 +1651,7 @@ function Invoke-TrelloGetCustomFieldItemsForCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/customFieldItems' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetFieldOnCard {
+function Invoke-GetFieldOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1669,7 +1669,7 @@ function Invoke-TrelloGetFieldOnCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/{field}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetListCard {
+function Invoke-GetListCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1687,7 +1687,7 @@ function Invoke-TrelloGetListCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/list' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersCard {
+function Invoke-GetMembersCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1705,7 +1705,7 @@ function Invoke-TrelloGetMembersCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/members' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersWhoHaveVotedOnCard {
+function Invoke-GetMembersWhoHaveVotedOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1723,7 +1723,7 @@ function Invoke-TrelloGetMembersWhoHaveVotedOnCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/membersVoted' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetPlugindataOnCard {
+function Invoke-GetPlugindataOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1741,7 +1741,7 @@ function Invoke-TrelloGetPlugindataOnCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/pluginData' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetStickersOnCard {
+function Invoke-GetStickersOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1759,7 +1759,7 @@ function Invoke-TrelloGetStickersOnCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/stickers' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetStickerOnCard {
+function Invoke-GetStickerOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1777,7 +1777,7 @@ function Invoke-TrelloGetStickerOnCard {
     Invoke-TrelloRequest -Method GET -Path '/cards/{id}/stickers/{idSticker}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetChecklist {
+function Invoke-GetChecklist {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1795,7 +1795,7 @@ function Invoke-TrelloGetChecklist {
     Invoke-TrelloRequest -Method GET -Path '/checklists/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardChecklistIsOn {
+function Invoke-GetBoardChecklistIsOn {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1813,7 +1813,7 @@ function Invoke-TrelloGetBoardChecklistIsOn {
     Invoke-TrelloRequest -Method GET -Path '/checklists/{id}/board' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCardChecklistIsOn {
+function Invoke-GetCardChecklistIsOn {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1831,7 +1831,7 @@ function Invoke-TrelloGetCardChecklistIsOn {
     Invoke-TrelloRequest -Method GET -Path '/checklists/{id}/cards' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCheckitemsOnChecklist {
+function Invoke-GetCheckitemsOnChecklist {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1849,7 +1849,7 @@ function Invoke-TrelloGetCheckitemsOnChecklist {
     Invoke-TrelloRequest -Method GET -Path '/checklists/{id}/checkItems' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCheckitemOnChecklist {
+function Invoke-GetCheckitemOnChecklist {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1867,7 +1867,7 @@ function Invoke-TrelloGetCheckitemOnChecklist {
     Invoke-TrelloRequest -Method GET -Path '/checklists/{id}/checkItems/{idCheckItem}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetFieldOnChecklist {
+function Invoke-GetFieldOnChecklist {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1885,7 +1885,7 @@ function Invoke-TrelloGetFieldOnChecklist {
     Invoke-TrelloRequest -Method GET -Path '/checklists/{id}/{field}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCustomField {
+function Invoke-GetCustomField {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1903,7 +1903,7 @@ function Invoke-TrelloGetCustomField {
     Invoke-TrelloRequest -Method GET -Path '/customFields/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloAddOptionToCustomFieldDropdown {
+function Invoke-AddOptionToCustomFieldDropdown {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1921,7 +1921,7 @@ function Invoke-TrelloAddOptionToCustomFieldDropdown {
     Invoke-TrelloRequest -Method POST -Path '/customFields/{id}/options' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetOptionCustomFieldDropdown {
+function Invoke-GetOptionCustomFieldDropdown {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1939,7 +1939,7 @@ function Invoke-TrelloGetOptionCustomFieldDropdown {
     Invoke-TrelloRequest -Method GET -Path '/customFields/{id}/options/{idCustomFieldOption}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetEnterprise {
+function Invoke-GetEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1957,7 +1957,7 @@ function Invoke-TrelloGetEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetEnterpriseAdminMembers {
+function Invoke-GetEnterpriseAdminMembers {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1975,7 +1975,7 @@ function Invoke-TrelloGetEnterpriseAdminMembers {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/admins' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetAuditlogDataForEnterprise {
+function Invoke-GetAuditlogDataForEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -1993,7 +1993,7 @@ function Invoke-TrelloGetAuditlogDataForEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/auditlog' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetClaimableorganizationsEnterprise {
+function Invoke-GetClaimableorganizationsEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2011,7 +2011,7 @@ function Invoke-TrelloGetClaimableorganizationsEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/claimableOrganizations' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersEnterprise {
+function Invoke-GetMembersEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2029,7 +2029,7 @@ function Invoke-TrelloGetMembersEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/members' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMemberEnterprise {
+function Invoke-GetMemberEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2047,7 +2047,7 @@ function Invoke-TrelloGetMemberEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/members/{idMember}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetOrganizationsEnterprise {
+function Invoke-GetOrganizationsEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2065,7 +2065,7 @@ function Invoke-TrelloGetOrganizationsEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/organizations' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloBulkAcceptSetOrganizationsToEnterprise {
+function Invoke-BulkAcceptSetOrganizationsToEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2083,7 +2083,7 @@ function Invoke-TrelloBulkAcceptSetOrganizationsToEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/organizations/bulk/{idOrganizations}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetPendingorganizationsEnterprise {
+function Invoke-GetPendingorganizationsEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2101,7 +2101,7 @@ function Invoke-TrelloGetPendingorganizationsEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/pendingOrganizations' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetSignupurlForEnterprise {
+function Invoke-GetSignupurlForEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2119,7 +2119,7 @@ function Invoke-TrelloGetSignupurlForEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/signupUrl' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBulkListOrganizationsThatCanBeTransferredToEnterprise {
+function Invoke-GetBulkListOrganizationsThatCanBeTransferredToEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2137,7 +2137,7 @@ function Invoke-TrelloGetBulkListOrganizationsThatCanBeTransferredToEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/transferrable/bulk/{idOrganizations}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetWhetherOrganizationCanBeTransferredToEnterprise {
+function Invoke-GetWhetherOrganizationCanBeTransferredToEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2155,7 +2155,7 @@ function Invoke-TrelloGetWhetherOrganizationCanBeTransferredToEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/transferrable/organization/{idOrganization}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetLabel {
+function Invoke-GetLabel {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2173,7 +2173,7 @@ function Invoke-TrelloGetLabel {
     Invoke-TrelloRequest -Method GET -Path '/labels/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetList {
+function Invoke-GetList {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2191,7 +2191,7 @@ function Invoke-TrelloGetList {
     Invoke-TrelloRequest -Method GET -Path '/lists/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetActionsForList {
+function Invoke-GetActionsForList {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2209,7 +2209,7 @@ function Invoke-TrelloGetActionsForList {
     Invoke-TrelloRequest -Method GET -Path '/lists/{id}/actions' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardListIsOn {
+function Invoke-GetBoardListIsOn {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2227,7 +2227,7 @@ function Invoke-TrelloGetBoardListIsOn {
     Invoke-TrelloRequest -Method GET -Path '/lists/{id}/board' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCardsInList {
+function Invoke-GetCardsInList {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2245,7 +2245,7 @@ function Invoke-TrelloGetCardsInList {
     Invoke-TrelloRequest -Method GET -Path '/lists/{id}/cards' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersActions {
+function Invoke-GetMembersActions {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2263,7 +2263,7 @@ function Invoke-TrelloGetMembersActions {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/actions' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardBackgrounds {
+function Invoke-GetBoardBackgrounds {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2281,7 +2281,7 @@ function Invoke-TrelloGetBoardBackgrounds {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/boardBackgrounds' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardbackgroundMember {
+function Invoke-GetBoardbackgroundMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2299,7 +2299,7 @@ function Invoke-TrelloGetBoardbackgroundMember {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/boardBackgrounds/{idBackground}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardsThatMemberBelongsTo {
+function Invoke-GetBoardsThatMemberBelongsTo {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2317,7 +2317,7 @@ function Invoke-TrelloGetBoardsThatMemberBelongsTo {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/boards' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardsMemberHasBeenInvitedTo {
+function Invoke-GetBoardsMemberHasBeenInvitedTo {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2335,7 +2335,7 @@ function Invoke-TrelloGetBoardsMemberHasBeenInvitedTo {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/boardsInvited' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersBoardstars {
+function Invoke-GetMembersBoardstars {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2353,7 +2353,7 @@ function Invoke-TrelloGetMembersBoardstars {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/boardStars' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardstarMember {
+function Invoke-GetBoardstarMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2371,7 +2371,7 @@ function Invoke-TrelloGetBoardstarMember {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/boardStars/{idStar}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCardsMemberIsOn {
+function Invoke-GetCardsMemberIsOn {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2389,7 +2389,7 @@ function Invoke-TrelloGetCardsMemberIsOn {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/cards' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCustomBoardBackgrounds {
+function Invoke-GetCustomBoardBackgrounds {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2407,7 +2407,7 @@ function Invoke-TrelloGetCustomBoardBackgrounds {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/customBoardBackgrounds' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCustomBoardBackgroundMember {
+function Invoke-GetCustomBoardBackgroundMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2425,7 +2425,7 @@ function Invoke-TrelloGetCustomBoardBackgroundMember {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/customBoardBackgrounds/{idBackground}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersCustomemojis {
+function Invoke-GetMembersCustomemojis {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2443,7 +2443,7 @@ function Invoke-TrelloGetMembersCustomemojis {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/customEmoji' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersCustomStickers {
+function Invoke-GetMembersCustomStickers {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2461,7 +2461,7 @@ function Invoke-TrelloGetMembersCustomStickers {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/customStickers' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersCustomSticker {
+function Invoke-GetMembersCustomSticker {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2479,7 +2479,7 @@ function Invoke-TrelloGetMembersCustomSticker {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/customStickers/{idSticker}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetFieldOnMember {
+function Invoke-GetFieldOnMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2497,7 +2497,7 @@ function Invoke-TrelloGetFieldOnMember {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/{field}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersNotificationChannelSettings {
+function Invoke-GetMembersNotificationChannelSettings {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2515,7 +2515,7 @@ function Invoke-TrelloGetMembersNotificationChannelSettings {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/notificationsChannelSettings' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBlockedNotificationKeysMemberOnThisChannel {
+function Invoke-GetBlockedNotificationKeysMemberOnThisChannel {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2533,7 +2533,7 @@ function Invoke-TrelloGetBlockedNotificationKeysMemberOnThisChannel {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/notificationsChannelSettings/{channel}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersNotifications {
+function Invoke-GetMembersNotifications {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2551,7 +2551,7 @@ function Invoke-TrelloGetMembersNotifications {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/notifications' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersOrganizations {
+function Invoke-GetMembersOrganizations {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2569,7 +2569,7 @@ function Invoke-TrelloGetMembersOrganizations {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/organizations' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetOrganizationsMemberHasBeenInvitedTo {
+function Invoke-GetOrganizationsMemberHasBeenInvitedTo {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2587,7 +2587,7 @@ function Invoke-TrelloGetOrganizationsMemberHasBeenInvitedTo {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/organizationsInvited' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersSavedSearched {
+function Invoke-GetMembersSavedSearched {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2605,7 +2605,7 @@ function Invoke-TrelloGetMembersSavedSearched {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/savedSearches' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetSavedSearch {
+function Invoke-GetSavedSearch {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2623,7 +2623,7 @@ function Invoke-TrelloGetSavedSearch {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/savedSearches/{idSearch}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersTokens {
+function Invoke-GetMembersTokens {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2641,7 +2641,7 @@ function Invoke-TrelloGetMembersTokens {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/tokens' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMember {
+function Invoke-GetMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2659,7 +2659,7 @@ function Invoke-TrelloGetMember {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetNotification {
+function Invoke-GetNotification {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2677,7 +2677,7 @@ function Invoke-TrelloGetNotification {
     Invoke-TrelloRequest -Method GET -Path '/notifications/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardNotificationIsOn {
+function Invoke-GetBoardNotificationIsOn {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2695,7 +2695,7 @@ function Invoke-TrelloGetBoardNotificationIsOn {
     Invoke-TrelloRequest -Method GET -Path '/notifications/{id}/board' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetCardNotificationIsOn {
+function Invoke-GetCardNotificationIsOn {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2713,7 +2713,7 @@ function Invoke-TrelloGetCardNotificationIsOn {
     Invoke-TrelloRequest -Method GET -Path '/notifications/{id}/card' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetFieldNotification {
+function Invoke-GetFieldNotification {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2731,7 +2731,7 @@ function Invoke-TrelloGetFieldNotification {
     Invoke-TrelloRequest -Method GET -Path '/notifications/{id}/{field}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetListNotificationIsOn {
+function Invoke-GetListNotificationIsOn {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2749,7 +2749,7 @@ function Invoke-TrelloGetListNotificationIsOn {
     Invoke-TrelloRequest -Method GET -Path '/notifications/{id}/list' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMemberWhoCreatedNotification {
+function Invoke-GetMemberWhoCreatedNotification {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2767,7 +2767,7 @@ function Invoke-TrelloGetMemberWhoCreatedNotification {
     Invoke-TrelloRequest -Method GET -Path '/notifications/{id}/memberCreator' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetNotificationsAssociatedOrganization {
+function Invoke-GetNotificationsAssociatedOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2785,7 +2785,7 @@ function Invoke-TrelloGetNotificationsAssociatedOrganization {
     Invoke-TrelloRequest -Method GET -Path '/notifications/{id}/organization' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetOrganization {
+function Invoke-GetOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2803,7 +2803,7 @@ function Invoke-TrelloGetOrganization {
     Invoke-TrelloRequest -Method GET -Path '/organizations/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetActionsForOrganization {
+function Invoke-GetActionsForOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2821,7 +2821,7 @@ function Invoke-TrelloGetActionsForOrganization {
     Invoke-TrelloRequest -Method GET -Path '/organizations/{id}/actions' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetBoardsInOrganization {
+function Invoke-GetBoardsInOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2839,7 +2839,7 @@ function Invoke-TrelloGetBoardsInOrganization {
     Invoke-TrelloRequest -Method GET -Path '/organizations/{id}/boards' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloRetrieveOrganizationsExports {
+function Invoke-RetrieveOrganizationsExports {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2857,7 +2857,7 @@ function Invoke-TrelloRetrieveOrganizationsExports {
     Invoke-TrelloRequest -Method GET -Path '/organizations/{id}/exports' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetFieldOnOrganization {
+function Invoke-GetFieldOnOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2875,7 +2875,7 @@ function Invoke-TrelloGetFieldOnOrganization {
     Invoke-TrelloRequest -Method GET -Path '/organizations/{id}/{field}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersOrganization {
+function Invoke-GetMembersOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2893,7 +2893,7 @@ function Invoke-TrelloGetMembersOrganization {
     Invoke-TrelloRequest -Method GET -Path '/organizations/{id}/members' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembershipsOrganization {
+function Invoke-GetMembershipsOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2911,7 +2911,7 @@ function Invoke-TrelloGetMembershipsOrganization {
     Invoke-TrelloRequest -Method GET -Path '/organizations/{id}/memberships' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembershipOrganization {
+function Invoke-GetMembershipOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2929,7 +2929,7 @@ function Invoke-TrelloGetMembershipOrganization {
     Invoke-TrelloRequest -Method GET -Path '/organizations/{id}/memberships/{idMembership}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetOrganizationsNewBillableGuests {
+function Invoke-GetOrganizationsNewBillableGuests {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2947,7 +2947,7 @@ function Invoke-TrelloGetOrganizationsNewBillableGuests {
     Invoke-TrelloRequest -Method GET -Path '/organizations/{id}/newBillableGuests/{idBoard}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetPlugindataScopedToOrganization {
+function Invoke-GetPlugindataScopedToOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2965,7 +2965,7 @@ function Invoke-TrelloGetPlugindataScopedToOrganization {
     Invoke-TrelloRequest -Method GET -Path '/organizations/{id}/pluginData' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetTagsOrganization {
+function Invoke-GetTagsOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -2983,7 +2983,7 @@ function Invoke-TrelloGetTagsOrganization {
     Invoke-TrelloRequest -Method GET -Path '/organizations/{id}/tags' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetPlugin {
+function Invoke-GetPlugin {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3001,7 +3001,7 @@ function Invoke-TrelloGetPlugin {
     Invoke-TrelloRequest -Method GET -Path '/plugins/{id}/' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetPluginsMemberPrivacyCompliance {
+function Invoke-GetPluginsMemberPrivacyCompliance {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3019,7 +3019,7 @@ function Invoke-TrelloGetPluginsMemberPrivacyCompliance {
     Invoke-TrelloRequest -Method GET -Path '/plugins/{id}/compliance/memberPrivacy' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloSearchTrello {
+function Invoke-SearchTrello {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3037,7 +3037,7 @@ function Invoke-TrelloSearchTrello {
     Invoke-TrelloRequest -Method GET -Path '/search' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloSearchForMembers {
+function Invoke-SearchForMembers {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3055,7 +3055,7 @@ function Invoke-TrelloSearchForMembers {
     Invoke-TrelloRequest -Method GET -Path '/search/members/' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetToken {
+function Invoke-GetToken {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3073,7 +3073,7 @@ function Invoke-TrelloGetToken {
     Invoke-TrelloRequest -Method GET -Path '/tokens/{token}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetTokensMember {
+function Invoke-GetTokensMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3091,7 +3091,7 @@ function Invoke-TrelloGetTokensMember {
     Invoke-TrelloRequest -Method GET -Path '/tokens/{token}/member' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetWebhooksForToken {
+function Invoke-GetWebhooksForToken {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3109,7 +3109,7 @@ function Invoke-TrelloGetWebhooksForToken {
     Invoke-TrelloRequest -Method GET -Path '/tokens/{token}/webhooks' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetWebhookBelongingToToken {
+function Invoke-GetWebhookBelongingToToken {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3127,7 +3127,7 @@ function Invoke-TrelloGetWebhookBelongingToToken {
     Invoke-TrelloRequest -Method GET -Path '/tokens/{token}/webhooks/{idWebhook}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetUsersEnterprise {
+function Invoke-GetUsersEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3145,7 +3145,7 @@ function Invoke-TrelloGetUsersEnterprise {
     Invoke-TrelloRequest -Method GET -Path '/enterprises/{id}/members/query' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetWebhook {
+function Invoke-GetWebhook {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3163,7 +3163,7 @@ function Invoke-TrelloGetWebhook {
     Invoke-TrelloRequest -Method GET -Path '/webhooks/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateAvatarForMember {
+function Invoke-CreateAvatarForMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3181,7 +3181,7 @@ function Invoke-TrelloCreateAvatarForMember {
     Invoke-TrelloRequest -Method POST -Path '/members/{id}/avatar' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateNewCustomBoardBackground {
+function Invoke-CreateNewCustomBoardBackground {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3199,7 +3199,7 @@ function Invoke-TrelloCreateNewCustomBoardBackground {
     Invoke-TrelloRequest -Method POST -Path '/members/{id}/customBoardBackgrounds' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMembersCustomEmoji {
+function Invoke-GetMembersCustomEmoji {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3217,7 +3217,7 @@ function Invoke-TrelloGetMembersCustomEmoji {
     Invoke-TrelloRequest -Method GET -Path '/members/{id}/customEmoji/{idEmoji}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetMemberNotificationIsAboutNotCreator {
+function Invoke-GetMemberNotificationIsAboutNotCreator {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3235,7 +3235,7 @@ function Invoke-TrelloGetMemberNotificationIsAboutNotCreator {
     Invoke-TrelloRequest -Method GET -Path '/notifications/{id}/member' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloRemoveMemberFromOrganizationAndAllOrganizationBoards {
+function Invoke-RemoveMemberFromOrganizationAndAllOrganizationBoards {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3253,7 +3253,7 @@ function Invoke-TrelloRemoveMemberFromOrganizationAndAllOrganizationBoards {
     Invoke-TrelloRequest -Method DELETE -Path '/organizations/{id}/members/{idMember}/all' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateReactionForAction {
+function Invoke-CreateReactionForAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3271,7 +3271,7 @@ function Invoke-TrelloCreateReactionForAction {
     Invoke-TrelloRequest -Method POST -Path '/actions/{idAction}/reactions' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateBoard {
+function Invoke-CreateBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3289,7 +3289,7 @@ function Invoke-TrelloCreateBoard {
     Invoke-TrelloRequest -Method POST -Path '/boards/' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloEnablePowerupOnBoard {
+function Invoke-EnablePowerupOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3307,7 +3307,7 @@ function Invoke-TrelloEnablePowerupOnBoard {
     Invoke-TrelloRequest -Method POST -Path '/boards/{id}/boardPlugins' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateCalendarkeyForBoard {
+function Invoke-CreateCalendarkeyForBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3325,7 +3325,7 @@ function Invoke-TrelloCreateCalendarkeyForBoard {
     Invoke-TrelloRequest -Method POST -Path '/boards/{id}/calendarKey/generate' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateEmailkeyForBoard {
+function Invoke-CreateEmailkeyForBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3343,7 +3343,7 @@ function Invoke-TrelloCreateEmailkeyForBoard {
     Invoke-TrelloRequest -Method POST -Path '/boards/{id}/emailKey/generate' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateTagForBoard {
+function Invoke-CreateTagForBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3361,7 +3361,7 @@ function Invoke-TrelloCreateTagForBoard {
     Invoke-TrelloRequest -Method POST -Path '/boards/{id}/idTags' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateLabelOnBoard {
+function Invoke-CreateLabelOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3379,7 +3379,7 @@ function Invoke-TrelloCreateLabelOnBoard {
     Invoke-TrelloRequest -Method POST -Path '/boards/{id}/labels' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateListOnBoard {
+function Invoke-CreateListOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3397,7 +3397,7 @@ function Invoke-TrelloCreateListOnBoard {
     Invoke-TrelloRequest -Method POST -Path '/boards/{id}/lists' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloMarkBoardAsViewed {
+function Invoke-MarkBoardAsViewed {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3415,7 +3415,7 @@ function Invoke-TrelloMarkBoardAsViewed {
     Invoke-TrelloRequest -Method POST -Path '/boards/{id}/markedAsViewed' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateNewCard {
+function Invoke-CreateNewCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3433,7 +3433,7 @@ function Invoke-TrelloCreateNewCard {
     Invoke-TrelloRequest -Method POST -Path '/cards' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloAddNewCommentToCard {
+function Invoke-AddNewCommentToCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3451,7 +3451,7 @@ function Invoke-TrelloAddNewCommentToCard {
     Invoke-TrelloRequest -Method POST -Path '/cards/{id}/actions/comments' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateAttachmentOnCard {
+function Invoke-CreateAttachmentOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3469,7 +3469,7 @@ function Invoke-TrelloCreateAttachmentOnCard {
     Invoke-TrelloRequest -Method POST -Path '/cards/{id}/attachments' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateChecklistOnCard {
+function Invoke-CreateChecklistOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3487,7 +3487,7 @@ function Invoke-TrelloCreateChecklistOnCard {
     Invoke-TrelloRequest -Method POST -Path '/cards/{id}/checklists' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloAddLabelToCard {
+function Invoke-AddLabelToCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3505,7 +3505,7 @@ function Invoke-TrelloAddLabelToCard {
     Invoke-TrelloRequest -Method POST -Path '/cards/{id}/idLabels' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloAddMemberToCard {
+function Invoke-AddMemberToCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3523,7 +3523,7 @@ function Invoke-TrelloAddMemberToCard {
     Invoke-TrelloRequest -Method POST -Path '/cards/{id}/idMembers' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateNewLabelOnCard {
+function Invoke-CreateNewLabelOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3541,7 +3541,7 @@ function Invoke-TrelloCreateNewLabelOnCard {
     Invoke-TrelloRequest -Method POST -Path '/cards/{id}/labels' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloMarkCardsNotificationsAsRead {
+function Invoke-MarkCardsNotificationsAsRead {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3559,7 +3559,7 @@ function Invoke-TrelloMarkCardsNotificationsAsRead {
     Invoke-TrelloRequest -Method POST -Path '/cards/{id}/markAssociatedNotificationsRead' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloAddStickerToCard {
+function Invoke-AddStickerToCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3577,7 +3577,7 @@ function Invoke-TrelloAddStickerToCard {
     Invoke-TrelloRequest -Method POST -Path '/cards/{id}/stickers' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateChecklist {
+function Invoke-CreateChecklist {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3595,7 +3595,7 @@ function Invoke-TrelloCreateChecklist {
     Invoke-TrelloRequest -Method POST -Path '/checklists' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateCheckitemOnChecklist {
+function Invoke-CreateCheckitemOnChecklist {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3613,7 +3613,7 @@ function Invoke-TrelloCreateCheckitemOnChecklist {
     Invoke-TrelloRequest -Method POST -Path '/checklists/{id}/checkItems' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateNewCustomFieldOnBoard {
+function Invoke-CreateNewCustomFieldOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3631,7 +3631,7 @@ function Invoke-TrelloCreateNewCustomFieldOnBoard {
     Invoke-TrelloRequest -Method POST -Path '/customFields' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetOptionsCustomFieldDropDown {
+function Invoke-GetOptionsCustomFieldDropDown {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3649,7 +3649,7 @@ function Invoke-TrelloGetOptionsCustomFieldDropDown {
     Invoke-TrelloRequest -Method GET -Path '/customFields/{id}/options' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateAuthTokenForEnterprise {
+function Invoke-CreateAuthTokenForEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3667,7 +3667,7 @@ function Invoke-TrelloCreateAuthTokenForEnterprise {
     Invoke-TrelloRequest -Method POST -Path '/enterprises/{id}/tokens' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateLabel {
+function Invoke-CreateLabel {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3685,7 +3685,7 @@ function Invoke-TrelloCreateLabel {
     Invoke-TrelloRequest -Method POST -Path '/labels' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateNewList {
+function Invoke-CreateNewList {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3703,7 +3703,7 @@ function Invoke-TrelloCreateNewList {
     Invoke-TrelloRequest -Method POST -Path '/lists' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloArchiveAllCardsInList {
+function Invoke-ArchiveAllCardsInList {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3721,7 +3721,7 @@ function Invoke-TrelloArchiveAllCardsInList {
     Invoke-TrelloRequest -Method POST -Path '/lists/{id}/archiveAllCards' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloMoveAllCardsInList {
+function Invoke-MoveAllCardsInList {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3739,7 +3739,7 @@ function Invoke-TrelloMoveAllCardsInList {
     Invoke-TrelloRequest -Method POST -Path '/lists/{id}/moveAllCards' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUploadNewBoardbackgroundForMember {
+function Invoke-UploadNewBoardbackgroundForMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3757,7 +3757,7 @@ function Invoke-TrelloUploadNewBoardbackgroundForMember {
     Invoke-TrelloRequest -Method POST -Path '/members/{id}/boardBackgrounds' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateStarForBoard {
+function Invoke-CreateStarForBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3775,7 +3775,7 @@ function Invoke-TrelloCreateStarForBoard {
     Invoke-TrelloRequest -Method POST -Path '/members/{id}/boardStars' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateCustomEmojiForMember {
+function Invoke-CreateCustomEmojiForMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3793,7 +3793,7 @@ function Invoke-TrelloCreateCustomEmojiForMember {
     Invoke-TrelloRequest -Method POST -Path '/members/{id}/customEmoji' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateCustomStickerForMember {
+function Invoke-CreateCustomStickerForMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3811,7 +3811,7 @@ function Invoke-TrelloCreateCustomStickerForMember {
     Invoke-TrelloRequest -Method POST -Path '/members/{id}/customStickers' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDismissMessageForMember {
+function Invoke-DismissMessageForMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3829,7 +3829,7 @@ function Invoke-TrelloDismissMessageForMember {
     Invoke-TrelloRequest -Method POST -Path '/members/{id}/oneTimeMessagesDismissed' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateSavedSearchForMember {
+function Invoke-CreateSavedSearchForMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3847,7 +3847,7 @@ function Invoke-TrelloCreateSavedSearchForMember {
     Invoke-TrelloRequest -Method POST -Path '/members/{id}/savedSearches' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloMarkAllNotificationsAsRead {
+function Invoke-MarkAllNotificationsAsRead {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3865,7 +3865,7 @@ function Invoke-TrelloMarkAllNotificationsAsRead {
     Invoke-TrelloRequest -Method POST -Path '/notifications/all/read' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateNewOrganization {
+function Invoke-CreateNewOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3883,7 +3883,7 @@ function Invoke-TrelloCreateNewOrganization {
     Invoke-TrelloRequest -Method POST -Path '/organizations' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateExportForOrganizations {
+function Invoke-CreateExportForOrganizations {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3901,7 +3901,7 @@ function Invoke-TrelloCreateExportForOrganizations {
     Invoke-TrelloRequest -Method POST -Path '/organizations/{id}/exports' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateLogoForOrganization {
+function Invoke-UpdateLogoForOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3919,7 +3919,7 @@ function Invoke-TrelloUpdateLogoForOrganization {
     Invoke-TrelloRequest -Method POST -Path '/organizations/{id}/logo' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateTagInOrganization {
+function Invoke-CreateTagInOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3937,7 +3937,7 @@ function Invoke-TrelloCreateTagInOrganization {
     Invoke-TrelloRequest -Method POST -Path '/organizations/{id}/tags' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateListingForPlugin {
+function Invoke-CreateListingForPlugin {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3955,7 +3955,7 @@ function Invoke-TrelloCreateListingForPlugin {
     Invoke-TrelloRequest -Method POST -Path '/plugins/{idPlugin}/listing' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateWebhooksForToken {
+function Invoke-CreateWebhooksForToken {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3973,7 +3973,7 @@ function Invoke-TrelloCreateWebhooksForToken {
     Invoke-TrelloRequest -Method POST -Path '/tokens/{token}/webhooks' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloCreateWebhook {
+function Invoke-CreateWebhook {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -3991,7 +3991,7 @@ function Invoke-TrelloCreateWebhook {
     Invoke-TrelloRequest -Method POST -Path '/webhooks/' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateAction {
+function Invoke-UpdateAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4009,7 +4009,7 @@ function Invoke-TrelloUpdateAction {
     Invoke-TrelloRequest -Method PUT -Path '/actions/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateCommentAction {
+function Invoke-UpdateCommentAction {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4027,7 +4027,7 @@ function Invoke-TrelloUpdateCommentAction {
     Invoke-TrelloRequest -Method PUT -Path '/actions/{id}/text' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateBoard {
+function Invoke-UpdateBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4045,7 +4045,7 @@ function Invoke-TrelloUpdateBoard {
     Invoke-TrelloRequest -Method PUT -Path '/boards/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloInviteMemberToBoardViaEmail {
+function Invoke-InviteMemberToBoardViaEmail {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4063,7 +4063,7 @@ function Invoke-TrelloInviteMemberToBoardViaEmail {
     Invoke-TrelloRequest -Method PUT -Path '/boards/{id}/members' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloAddMemberToBoard {
+function Invoke-AddMemberToBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4081,7 +4081,7 @@ function Invoke-TrelloAddMemberToBoard {
     Invoke-TrelloRequest -Method PUT -Path '/boards/{id}/members/{idMember}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateMembershipMemberOnBoard {
+function Invoke-UpdateMembershipMemberOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4099,7 +4099,7 @@ function Invoke-TrelloUpdateMembershipMemberOnBoard {
     Invoke-TrelloRequest -Method PUT -Path '/boards/{id}/memberships/{idMembership}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateShowsidebarPrefOnBoard {
+function Invoke-UpdateShowsidebarPrefOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4117,7 +4117,7 @@ function Invoke-TrelloUpdateShowsidebarPrefOnBoard {
     Invoke-TrelloRequest -Method PUT -Path '/boards/{id}/myPrefs/showSidebar' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateShowsidebaractivityPrefOnBoard {
+function Invoke-UpdateShowsidebaractivityPrefOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4135,7 +4135,7 @@ function Invoke-TrelloUpdateShowsidebaractivityPrefOnBoard {
     Invoke-TrelloRequest -Method PUT -Path '/boards/{id}/myPrefs/showSidebarActivity' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateShowsidebarboardactionsPrefOnBoard {
+function Invoke-UpdateShowsidebarboardactionsPrefOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4153,7 +4153,7 @@ function Invoke-TrelloUpdateShowsidebarboardactionsPrefOnBoard {
     Invoke-TrelloRequest -Method PUT -Path '/boards/{id}/myPrefs/showSidebarBoardActions' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateShowsidebarmembersPrefOnBoard {
+function Invoke-UpdateShowsidebarmembersPrefOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4171,7 +4171,7 @@ function Invoke-TrelloUpdateShowsidebarmembersPrefOnBoard {
     Invoke-TrelloRequest -Method PUT -Path '/boards/{id}/myPrefs/showSidebarMembers' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateEmailpositionPrefOnBoard {
+function Invoke-UpdateEmailpositionPrefOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4189,7 +4189,7 @@ function Invoke-TrelloUpdateEmailpositionPrefOnBoard {
     Invoke-TrelloRequest -Method PUT -Path '/boards/{id}/myPrefs/emailPosition' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateIdemaillistPrefOnBoard {
+function Invoke-UpdateIdemaillistPrefOnBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4207,7 +4207,7 @@ function Invoke-TrelloUpdateIdemaillistPrefOnBoard {
     Invoke-TrelloRequest -Method PUT -Path '/boards/{id}/myPrefs/idEmailList' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateCard {
+function Invoke-UpdateCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4225,7 +4225,7 @@ function Invoke-TrelloUpdateCard {
     Invoke-TrelloRequest -Method PUT -Path '/cards/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateCommentActionOnCard {
+function Invoke-UpdateCommentActionOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4243,7 +4243,7 @@ function Invoke-TrelloUpdateCommentActionOnCard {
     Invoke-TrelloRequest -Method PUT -Path '/cards/{id}/actions/{idAction}/comments' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateCheckitemOnCard {
+function Invoke-UpdateCheckitemOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4261,7 +4261,7 @@ function Invoke-TrelloUpdateCheckitemOnCard {
     Invoke-TrelloRequest -Method PUT -Path '/cards/{id}/checkItem/{idCheckItem}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateStickerOnCard {
+function Invoke-UpdateStickerOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4279,7 +4279,7 @@ function Invoke-TrelloUpdateStickerOnCard {
     Invoke-TrelloRequest -Method PUT -Path '/cards/{id}/stickers/{idSticker}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateCheckitemOnChecklistOnCard {
+function Invoke-UpdateCheckitemOnChecklistOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4297,7 +4297,7 @@ function Invoke-TrelloUpdateCheckitemOnChecklistOnCard {
     Invoke-TrelloRequest -Method PUT -Path '/cards/{idCard}/checklist/{idChecklist}/checkItem/{idCheckItem}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateCustomFieldItemOnCard {
+function Invoke-UpdateCustomFieldItemOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4315,7 +4315,7 @@ function Invoke-TrelloUpdateCustomFieldItemOnCard {
     Invoke-TrelloRequest -Method PUT -Path '/cards/{idCard}/customField/{idCustomField}/item' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateMultipleCustomFieldItemsOnCard {
+function Invoke-UpdateMultipleCustomFieldItemsOnCard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4333,7 +4333,7 @@ function Invoke-TrelloUpdateMultipleCustomFieldItemsOnCard {
     Invoke-TrelloRequest -Method PUT -Path '/cards/{idCard}/customFields' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateFieldOnChecklist {
+function Invoke-UpdateFieldOnChecklist {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4351,7 +4351,7 @@ function Invoke-TrelloUpdateFieldOnChecklist {
     Invoke-TrelloRequest -Method PUT -Path '/checklists/{id}/{field}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateChecklist {
+function Invoke-UpdateChecklist {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4369,7 +4369,7 @@ function Invoke-TrelloUpdateChecklist {
     Invoke-TrelloRequest -Method PUT -Path '/checklists/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateCustomFieldDefinition {
+function Invoke-UpdateCustomFieldDefinition {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4387,7 +4387,7 @@ function Invoke-TrelloUpdateCustomFieldDefinition {
     Invoke-TrelloRequest -Method PUT -Path '/customFields/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateMemberToBeAdminEnterprise {
+function Invoke-UpdateMemberToBeAdminEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4405,7 +4405,7 @@ function Invoke-TrelloUpdateMemberToBeAdminEnterprise {
     Invoke-TrelloRequest -Method PUT -Path '/enterprises/{id}/admins/{idMember}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeclineEnterprisejoinrequestsFromOneOrganizationOrBulkListOrganizations {
+function Invoke-DeclineEnterprisejoinrequestsFromOneOrganizationOrBulkListOrganizations {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4423,7 +4423,7 @@ function Invoke-TrelloDeclineEnterprisejoinrequestsFromOneOrganizationOrBulkList
     Invoke-TrelloRequest -Method PUT -Path '/enterprises/{id}/enterpriseJoinRequest/bulk' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateMembersLicensedStatus {
+function Invoke-UpdateMembersLicensedStatus {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4441,7 +4441,7 @@ function Invoke-TrelloUpdateMembersLicensedStatus {
     Invoke-TrelloRequest -Method PUT -Path '/enterprises/{id}/members/{idMember}/licensed' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloTransferOrganizationToEnterprise {
+function Invoke-TransferOrganizationToEnterprise {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4459,7 +4459,7 @@ function Invoke-TrelloTransferOrganizationToEnterprise {
     Invoke-TrelloRequest -Method PUT -Path '/enterprises/{id}/organizations' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloMoveListToBoard {
+function Invoke-MoveListToBoard {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4477,7 +4477,7 @@ function Invoke-TrelloMoveListToBoard {
     Invoke-TrelloRequest -Method PUT -Path '/lists/{id}/idBoard' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateLabel {
+function Invoke-UpdateLabel {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4495,7 +4495,7 @@ function Invoke-TrelloUpdateLabel {
     Invoke-TrelloRequest -Method PUT -Path '/labels/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateFieldOnLabel {
+function Invoke-UpdateFieldOnLabel {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4513,7 +4513,7 @@ function Invoke-TrelloUpdateFieldOnLabel {
     Invoke-TrelloRequest -Method PUT -Path '/labels/{id}/{field}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateList {
+function Invoke-UpdateList {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4531,7 +4531,7 @@ function Invoke-TrelloUpdateList {
     Invoke-TrelloRequest -Method PUT -Path '/lists/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloArchiveOrUnarchiveList {
+function Invoke-ArchiveOrUnarchiveList {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4549,7 +4549,7 @@ function Invoke-TrelloArchiveOrUnarchiveList {
     Invoke-TrelloRequest -Method PUT -Path '/lists/{id}/closed' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateFieldOnList {
+function Invoke-UpdateFieldOnList {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4567,7 +4567,7 @@ function Invoke-TrelloUpdateFieldOnList {
     Invoke-TrelloRequest -Method PUT -Path '/lists/{id}/{field}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateMember {
+function Invoke-UpdateMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4585,7 +4585,7 @@ function Invoke-TrelloUpdateMember {
     Invoke-TrelloRequest -Method PUT -Path '/members/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateMembersCustomBoardBackground {
+function Invoke-UpdateMembersCustomBoardBackground {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4603,7 +4603,7 @@ function Invoke-TrelloUpdateMembersCustomBoardBackground {
     Invoke-TrelloRequest -Method PUT -Path '/members/{id}/boardBackgrounds/{idBackground}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdatePositionBoardstarMember {
+function Invoke-UpdatePositionBoardstarMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4621,7 +4621,7 @@ function Invoke-TrelloUpdatePositionBoardstarMember {
     Invoke-TrelloRequest -Method PUT -Path '/members/{id}/boardStars/{idStar}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateCustomBoardBackgroundMember {
+function Invoke-UpdateCustomBoardBackgroundMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4639,7 +4639,7 @@ function Invoke-TrelloUpdateCustomBoardBackgroundMember {
     Invoke-TrelloRequest -Method PUT -Path '/members/{id}/customBoardBackgrounds/{idBackground}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateBlockedNotificationKeysMember {
+function Invoke-UpdateBlockedNotificationKeysMember {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4657,7 +4657,7 @@ function Invoke-TrelloUpdateBlockedNotificationKeysMember {
     Invoke-TrelloRequest -Method PUT -Path '/members/{id}/notificationsChannelSettings' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateBlockedNotificationKeysMemberChannel {
+function Invoke-UpdateBlockedNotificationKeysMemberChannel {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4675,7 +4675,7 @@ function Invoke-TrelloUpdateBlockedNotificationKeysMemberChannel {
     Invoke-TrelloRequest -Method PUT -Path '/members/{id}/notificationsChannelSettings/{channel}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateBlockedNotificationKeysMemberOnChannel {
+function Invoke-UpdateBlockedNotificationKeysMemberOnChannel {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4693,7 +4693,7 @@ function Invoke-TrelloUpdateBlockedNotificationKeysMemberOnChannel {
     Invoke-TrelloRequest -Method PUT -Path '/members/{id}/notificationsChannelSettings/{channel}/{blockedKeys}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateSavedSearch {
+function Invoke-UpdateSavedSearch {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4711,7 +4711,7 @@ function Invoke-TrelloUpdateSavedSearch {
     Invoke-TrelloRequest -Method PUT -Path '/members/{id}/savedSearches/{idSearch}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateNotification {
+function Invoke-UpdateNotification {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4729,7 +4729,7 @@ function Invoke-TrelloUpdateNotification {
     Invoke-TrelloRequest -Method PUT -Path '/notifications/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloMarkNotificationUnread {
+function Invoke-MarkNotificationUnread {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4747,7 +4747,7 @@ function Invoke-TrelloMarkNotificationUnread {
     Invoke-TrelloRequest -Method PUT -Path '/notifications/{id}/unread' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateOrganization {
+function Invoke-UpdateOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4765,7 +4765,7 @@ function Invoke-TrelloUpdateOrganization {
     Invoke-TrelloRequest -Method PUT -Path '/organizations/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateOrganizationsMembers {
+function Invoke-UpdateOrganizationsMembers {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4783,7 +4783,7 @@ function Invoke-TrelloUpdateOrganizationsMembers {
     Invoke-TrelloRequest -Method PUT -Path '/organizations/{id}/members' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateMemberOrganization {
+function Invoke-UpdateMemberOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4801,7 +4801,7 @@ function Invoke-TrelloUpdateMemberOrganization {
     Invoke-TrelloRequest -Method PUT -Path '/organizations/{id}/members/{idMember}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloDeactivateOrReactivateMemberOrganization {
+function Invoke-DeactivateOrReactivateMemberOrganization {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4819,7 +4819,7 @@ function Invoke-TrelloDeactivateOrReactivateMemberOrganization {
     Invoke-TrelloRequest -Method PUT -Path '/organizations/{id}/members/{idMember}/deactivated' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdatePlugin {
+function Invoke-UpdatePlugin {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4837,7 +4837,7 @@ function Invoke-TrelloUpdatePlugin {
     Invoke-TrelloRequest -Method PUT -Path '/plugins/{id}/' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdatingPluginsListing {
+function Invoke-UpdatingPluginsListing {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4855,7 +4855,7 @@ function Invoke-TrelloUpdatingPluginsListing {
     Invoke-TrelloRequest -Method PUT -Path '/plugins/{idPlugin}/listings/{idListing}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateWebhook {
+function Invoke-UpdateWebhook {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4873,7 +4873,7 @@ function Invoke-TrelloUpdateWebhook {
     Invoke-TrelloRequest -Method PUT -Path '/webhooks/{id}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloUpdateWebhookCreatedByToken {
+function Invoke-UpdateWebhookCreatedByToken {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4891,7 +4891,7 @@ function Invoke-TrelloUpdateWebhookCreatedByToken {
     Invoke-TrelloRequest -Method PUT -Path '/tokens/{token}/webhooks/{idWebhook}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
 
-function Invoke-TrelloGetFieldOnWebhook {
+function Invoke-GetFieldOnWebhook {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$false)]
@@ -4908,9 +4908,6 @@ function Invoke-TrelloGetFieldOnWebhook {
     )
     Invoke-TrelloRequest -Method GET -Path '/webhooks/{id}/{field}' -Query $Query -Body $Body -Parameters $Parameters -Params $Params
 }
-
-Set-Alias -Name Invoke-TrelloCreateCard -Value Invoke-TrelloCreateNewCard
-
 
 # Total functions: 254
 # This file is auto-generated - do not edit manually

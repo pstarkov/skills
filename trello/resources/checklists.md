@@ -11,8 +11,8 @@ Total: 12 endpoints
 **Endpoint:** `GET /checklists/{id}`
 
 **Functions:**
-- **Bash:** `trello_get_checklist`
-- **PowerShell:** `Invoke-TrelloGetChecklist`
+- **Bash:** `get_checklist`
+- **PowerShell:** `Invoke-GetChecklist`
 
 **Parameters:**
 
@@ -32,8 +32,8 @@ Total: 12 endpoints
 **Endpoint:** `GET /checklists/{id}/board`
 
 **Functions:**
-- **Bash:** `trello_get_board_checklist_is_on`
-- **PowerShell:** `Invoke-TrelloGetBoardChecklistIsOn`
+- **Bash:** `get_board_checklist_is_on`
+- **PowerShell:** `Invoke-GetBoardChecklistIsOn`
 
 **Parameters:**
 
@@ -51,8 +51,8 @@ Total: 12 endpoints
 **Endpoint:** `GET /checklists/{id}/cards`
 
 **Functions:**
-- **Bash:** `trello_get_card_checklist_is_on`
-- **PowerShell:** `Invoke-TrelloGetCardChecklistIsOn`
+- **Bash:** `get_card_checklist_is_on`
+- **PowerShell:** `Invoke-GetCardChecklistIsOn`
 
 **Parameters:**
 
@@ -69,8 +69,8 @@ Total: 12 endpoints
 **Endpoint:** `GET /checklists/{id}/checkItems`
 
 **Functions:**
-- **Bash:** `trello_get_checkitems_on_checklist`
-- **PowerShell:** `Invoke-TrelloGetCheckitemsOnChecklist`
+- **Bash:** `get_checkitems_on_checklist`
+- **PowerShell:** `Invoke-GetCheckitemsOnChecklist`
 
 **Parameters:**
 
@@ -88,8 +88,8 @@ Total: 12 endpoints
 **Endpoint:** `GET /checklists/{id}/checkItems/{idCheckItem}`
 
 **Functions:**
-- **Bash:** `trello_get_checkitem_on_checklist`
-- **PowerShell:** `Invoke-TrelloGetCheckitemOnChecklist`
+- **Bash:** `get_checkitem_on_checklist`
+- **PowerShell:** `Invoke-GetCheckitemOnChecklist`
 
 **Parameters:**
 
@@ -106,8 +106,8 @@ Total: 12 endpoints
 **Endpoint:** `GET /checklists/{id}/{field}`
 
 **Functions:**
-- **Bash:** `trello_get_field_on_checklist`
-- **PowerShell:** `Invoke-TrelloGetFieldOnChecklist`
+- **Bash:** `get_field_on_checklist`
+- **PowerShell:** `Invoke-GetFieldOnChecklist`
 
 ---
 
@@ -120,8 +120,8 @@ Total: 12 endpoints
 **Endpoint:** `POST /checklists`
 
 **Functions:**
-- **Bash:** `trello_create_checklist`
-- **PowerShell:** `Invoke-TrelloCreateChecklist`
+- **Bash:** `create_checklist`
+- **PowerShell:** `Invoke-CreateChecklist`
 
 **Parameters:**
 
@@ -141,8 +141,8 @@ Total: 12 endpoints
 **Endpoint:** `POST /checklists/{id}/checkItems`
 
 **Functions:**
-- **Bash:** `trello_create_checkitem_on_checklist`
-- **PowerShell:** `Invoke-TrelloCreateCheckitemOnChecklist`
+- **Bash:** `create_checkitem_on_checklist`
+- **PowerShell:** `Invoke-CreateCheckitemOnChecklist`
 
 **Parameters:**
 
@@ -168,8 +168,8 @@ Total: 12 endpoints
 **Description:** Update an existing checklist.
 
 **Functions:**
-- **Bash:** `trello_update_checklist`
-- **PowerShell:** `Invoke-TrelloUpdateChecklist`
+- **Bash:** `update_checklist`
+- **PowerShell:** `Invoke-UpdateChecklist`
 
 **Parameters:**
 
@@ -187,8 +187,8 @@ Total: 12 endpoints
 **Endpoint:** `PUT /checklists/{id}/{field}`
 
 **Functions:**
-- **Bash:** `trello_update_field_on_checklist`
-- **PowerShell:** `Invoke-TrelloUpdateFieldOnChecklist`
+- **Bash:** `update_field_on_checklist`
+- **PowerShell:** `Invoke-UpdateFieldOnChecklist`
 
 **Parameters:**
 
@@ -209,8 +209,8 @@ Total: 12 endpoints
 **Description:** Delete a checklist
 
 **Functions:**
-- **Bash:** `trello_delete_checklist`
-- **PowerShell:** `Invoke-TrelloDeleteChecklist`
+- **Bash:** `delete_checklist`
+- **PowerShell:** `Invoke-DeleteChecklist`
 
 ---
 
@@ -223,7 +223,7 @@ Total: 12 endpoints
 **Description:** Remove an item from a checklist
 
 **Functions:**
-- **Bash:** `trello_delete_checkitem_from_checklist`
-- **PowerShell:** `Invoke-TrelloDeleteCheckitemFromChecklist`
+- **Bash:** `delete_checkitem_from_checklist`
+- **PowerShell:** `Invoke-DeleteCheckitemFromChecklist`
 
 ---

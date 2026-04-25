@@ -13,8 +13,8 @@ Total: 24 endpoints
 **Description:** Get the Custom Field Definitions that exist on a board.
 
 **Functions:**
-- **Bash:** `trello_get_custom_fields_for_board`
-- **PowerShell:** `Invoke-TrelloGetCustomFieldsForBoard`
+- **Bash:** `get_custom_fields_for_board`
+- **PowerShell:** `Invoke-GetCustomFieldsForBoard`
 
 **Parameters:**
 
@@ -33,8 +33,8 @@ Total: 24 endpoints
 **Description:** Get the custom field items for a card.
 
 **Functions:**
-- **Bash:** `trello_get_custom_field_items_for_card`
-- **PowerShell:** `Invoke-TrelloGetCustomFieldItemsForCard`
+- **Bash:** `get_custom_field_items_for_card`
+- **PowerShell:** `Invoke-GetCustomFieldItemsForCard`
 
 **Parameters:**
 
@@ -51,8 +51,8 @@ Total: 24 endpoints
 **Endpoint:** `GET /customFields/{id}`
 
 **Functions:**
-- **Bash:** `trello_get_custom_field`
-- **PowerShell:** `Invoke-TrelloGetCustomField`
+- **Bash:** `get_custom_field`
+- **PowerShell:** `Invoke-GetCustomField`
 
 ---
 
@@ -65,8 +65,8 @@ Total: 24 endpoints
 **Description:** Get the options of a drop down Custom Field
 
 **Functions:**
-- **Bash:** `trello_get_options_custom_field_drop_down`
-- **PowerShell:** `Invoke-TrelloGetOptionsCustomFieldDropDown`
+- **Bash:** `get_options_custom_field_drop_down`
+- **PowerShell:** `Invoke-GetOptionsCustomFieldDropDown`
 
 ---
 
@@ -79,8 +79,8 @@ Total: 24 endpoints
 **Description:** Retrieve a specific, existing Option on a given dropdown-type Custom Field
 
 **Functions:**
-- **Bash:** `trello_get_option_custom_field_dropdown`
-- **PowerShell:** `Invoke-TrelloGetOptionCustomFieldDropdown`
+- **Bash:** `get_option_custom_field_dropdown`
+- **PowerShell:** `Invoke-GetOptionCustomFieldDropdown`
 
 ---
 
@@ -93,8 +93,8 @@ Total: 24 endpoints
 **Description:** Get a member's custom board backgrounds
 
 **Functions:**
-- **Bash:** `trello_get_custom_board_backgrounds`
-- **PowerShell:** `Invoke-TrelloGetCustomBoardBackgrounds`
+- **Bash:** `get_custom_board_backgrounds`
+- **PowerShell:** `Invoke-GetCustomBoardBackgrounds`
 
 ---
 
@@ -107,8 +107,8 @@ Total: 24 endpoints
 **Description:** Get a specific custom board background
 
 **Functions:**
-- **Bash:** `trello_get_custom_board_background_member`
-- **PowerShell:** `Invoke-TrelloGetCustomBoardBackgroundMember`
+- **Bash:** `get_custom_board_background_member`
+- **PowerShell:** `Invoke-GetCustomBoardBackgroundMember`
 
 ---
 
@@ -121,8 +121,8 @@ Total: 24 endpoints
 **Description:** Get a Member's uploaded custom Emojis
 
 **Functions:**
-- **Bash:** `trello_get_members_customemojis`
-- **PowerShell:** `Invoke-TrelloGetMembersCustomemojis`
+- **Bash:** `get_members_customemojis`
+- **PowerShell:** `Invoke-GetMembersCustomemojis`
 
 ---
 
@@ -133,8 +133,8 @@ Total: 24 endpoints
 **Endpoint:** `GET /members/{id}/customEmoji/{idEmoji}`
 
 **Functions:**
-- **Bash:** `trello_get_members_custom_emoji`
-- **PowerShell:** `Invoke-TrelloGetMembersCustomEmoji`
+- **Bash:** `get_members_custom_emoji`
+- **PowerShell:** `Invoke-GetMembersCustomEmoji`
 
 **Parameters:**
 
@@ -155,8 +155,8 @@ Total: 24 endpoints
 **Description:** Get a Member's uploaded stickers
 
 **Functions:**
-- **Bash:** `trello_get_members_custom_stickers`
-- **PowerShell:** `Invoke-TrelloGetMembersCustomStickers`
+- **Bash:** `get_members_custom_stickers`
+- **PowerShell:** `Invoke-GetMembersCustomStickers`
 
 ---
 
@@ -167,8 +167,8 @@ Total: 24 endpoints
 **Endpoint:** `GET /members/{id}/customStickers/{idSticker}`
 
 **Functions:**
-- **Bash:** `trello_get_members_custom_sticker`
-- **PowerShell:** `Invoke-TrelloGetMembersCustomSticker`
+- **Bash:** `get_members_custom_sticker`
+- **PowerShell:** `Invoke-GetMembersCustomSticker`
 
 **Parameters:**
 
@@ -189,8 +189,8 @@ Total: 24 endpoints
 **Description:** Create a new Custom Field on a board.
 
 **Functions:**
-- **Bash:** `trello_create_new_custom_field_on_board`
-- **PowerShell:** `Invoke-TrelloCreateNewCustomFieldOnBoard`
+- **Bash:** `create_new_custom_field_on_board`
+- **PowerShell:** `Invoke-CreateNewCustomFieldOnBoard`
 
 ---
 
@@ -203,8 +203,8 @@ Total: 24 endpoints
 **Description:** Add an option to a dropdown Custom Field
 
 **Functions:**
-- **Bash:** `trello_add_option_to_custom_field_dropdown`
-- **PowerShell:** `Invoke-TrelloAddOptionToCustomFieldDropdown`
+- **Bash:** `add_option_to_custom_field_dropdown`
+- **PowerShell:** `Invoke-AddOptionToCustomFieldDropdown`
 
 ---
 
@@ -217,8 +217,8 @@ Total: 24 endpoints
 **Description:** Upload a new custom board background
 
 **Functions:**
-- **Bash:** `trello_create_new_custom_board_background`
-- **PowerShell:** `Invoke-TrelloCreateNewCustomBoardBackground`
+- **Bash:** `create_new_custom_board_background`
+- **PowerShell:** `Invoke-CreateNewCustomBoardBackground`
 
 **Parameters:**
 
@@ -237,8 +237,8 @@ Total: 24 endpoints
 **Description:** Create a new custom Emoji
 
 **Functions:**
-- **Bash:** `trello_create_custom_emoji_for_member`
-- **PowerShell:** `Invoke-TrelloCreateCustomEmojiForMember`
+- **Bash:** `create_custom_emoji_for_member`
+- **PowerShell:** `Invoke-CreateCustomEmojiForMember`
 
 **Parameters:**
 
@@ -258,8 +258,8 @@ Total: 24 endpoints
 **Description:** Upload a new custom sticker
 
 **Functions:**
-- **Bash:** `trello_create_custom_sticker_for_member`
-- **PowerShell:** `Invoke-TrelloCreateCustomStickerForMember`
+- **Bash:** `create_custom_sticker_for_member`
+- **PowerShell:** `Invoke-CreateCustomStickerForMember`
 
 **Parameters:**
 
@@ -280,8 +280,8 @@ Total: 24 endpoints
 **Description:** Setting, updating, and removing the value for a Custom Field on a card. For more details on updating custom fields check out the [Getting Started With Custom Fields](/cloud/trello/guides/rest-api/gett...
 
 **Functions:**
-- **Bash:** `trello_update_custom_field_item_on_card`
-- **PowerShell:** `Invoke-TrelloUpdateCustomFieldItemOnCard`
+- **Bash:** `update_custom_field_item_on_card`
+- **PowerShell:** `Invoke-UpdateCustomFieldItemOnCard`
 
 **Parameters:**
 
@@ -301,8 +301,8 @@ Total: 24 endpoints
 **Description:** Setting, updating, and removing the values for multiple Custom Fields on a card. For more details on updating custom fields check out the [Getting Started With Custom Fields](/cloud/trello/guides/rest...
 
 **Functions:**
-- **Bash:** `trello_update_multiple_custom_field_items_on_card`
-- **PowerShell:** `Invoke-TrelloUpdateMultipleCustomFieldItemsOnCard`
+- **Bash:** `update_multiple_custom_field_items_on_card`
+- **PowerShell:** `Invoke-UpdateMultipleCustomFieldItemsOnCard`
 
 ---
 
@@ -315,8 +315,8 @@ Total: 24 endpoints
 **Description:** Update a Custom Field definition.
 
 **Functions:**
-- **Bash:** `trello_update_custom_field_definition`
-- **PowerShell:** `Invoke-TrelloUpdateCustomFieldDefinition`
+- **Bash:** `update_custom_field_definition`
+- **PowerShell:** `Invoke-UpdateCustomFieldDefinition`
 
 ---
 
@@ -329,8 +329,8 @@ Total: 24 endpoints
 **Description:** Update a specific custom board background
 
 **Functions:**
-- **Bash:** `trello_update_custom_board_background_member`
-- **PowerShell:** `Invoke-TrelloUpdateCustomBoardBackgroundMember`
+- **Bash:** `update_custom_board_background_member`
+- **PowerShell:** `Invoke-UpdateCustomBoardBackgroundMember`
 
 **Parameters:**
 
@@ -352,8 +352,8 @@ Total: 24 endpoints
 **Description:** Delete a Custom Field from a board.
 
 **Functions:**
-- **Bash:** `trello_delete_custom_field_definition`
-- **PowerShell:** `Invoke-TrelloDeleteCustomFieldDefinition`
+- **Bash:** `delete_custom_field_definition`
+- **PowerShell:** `Invoke-DeleteCustomFieldDefinition`
 
 ---
 
@@ -366,8 +366,8 @@ Total: 24 endpoints
 **Description:** Delete an option from a Custom Field dropdown.
 
 **Functions:**
-- **Bash:** `trello_delete_option_custom_field_dropdown`
-- **PowerShell:** `Invoke-TrelloDeleteOptionCustomFieldDropdown`
+- **Bash:** `delete_option_custom_field_dropdown`
+- **PowerShell:** `Invoke-DeleteOptionCustomFieldDropdown`
 
 ---
 
@@ -380,8 +380,8 @@ Total: 24 endpoints
 **Description:** Delete a specific custom board background
 
 **Functions:**
-- **Bash:** `trello_delete_custom_board_background_member`
-- **PowerShell:** `Invoke-TrelloDeleteCustomBoardBackgroundMember`
+- **Bash:** `delete_custom_board_background_member`
+- **PowerShell:** `Invoke-DeleteCustomBoardBackgroundMember`
 
 ---
 
@@ -392,7 +392,7 @@ Total: 24 endpoints
 **Endpoint:** `DELETE /members/{id}/customStickers/{idSticker}`
 
 **Functions:**
-- **Bash:** `trello_delete_members_custom_sticker`
-- **PowerShell:** `Invoke-TrelloDeleteMembersCustomSticker`
+- **Bash:** `delete_members_custom_sticker`
+- **PowerShell:** `Invoke-DeleteMembersCustomSticker`
 
 ---

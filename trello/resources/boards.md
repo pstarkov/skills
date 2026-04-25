@@ -13,8 +13,8 @@ Total: 35 endpoints
 **Description:** Get all of the actions of a Board. See [Nested Resources](/cloud/trello/guides/rest-api/nested-resources/) for more information.
 
 **Functions:**
-- **Bash:** `trello_get_actions_board`
-- **PowerShell:** `Invoke-TrelloGetActionsBoard`
+- **Bash:** `get_actions_board`
+- **PowerShell:** `Invoke-GetActionsBoard`
 
 **Parameters:**
 
@@ -44,8 +44,8 @@ Total: 35 endpoints
 **Endpoint:** `GET /boards/{boardId}/boardStars`
 
 **Functions:**
-- **Bash:** `trello_get_boardstars_on_board`
-- **PowerShell:** `Invoke-TrelloGetBoardstarsOnBoard`
+- **Bash:** `get_boardstars_on_board`
+- **PowerShell:** `Invoke-GetBoardstarsOnBoard`
 
 **Parameters:**
 
@@ -65,8 +65,8 @@ Total: 35 endpoints
 **Description:** Request a single board.
 
 **Functions:**
-- **Bash:** `trello_get_board`
-- **PowerShell:** `Invoke-TrelloGetBoard`
+- **Bash:** `get_board`
+- **PowerShell:** `Invoke-GetBoard`
 
 **Parameters:**
 
@@ -100,8 +100,8 @@ Total: 35 endpoints
 **Description:** Get the enabled Power-Ups on a board
 
 **Functions:**
-- **Bash:** `trello_get_enabled_powerups_on_board`
-- **PowerShell:** `Invoke-TrelloGetEnabledPowerupsOnBoard`
+- **Bash:** `get_enabled_powerups_on_board`
+- **PowerShell:** `Invoke-GetEnabledPowerupsOnBoard`
 
 ---
 
@@ -114,8 +114,8 @@ Total: 35 endpoints
 **Description:** Get all of the open Cards on a Board. See [Nested Resources](/cloud/trello/guides/rest-api/nested-resources/) for more information.
 
 **Functions:**
-- **Bash:** `trello_get_cards_on_board`
-- **PowerShell:** `Invoke-TrelloGetCardsOnBoard`
+- **Bash:** `get_cards_on_board`
+- **PowerShell:** `Invoke-GetCardsOnBoard`
 
 **Parameters:**
 
@@ -134,8 +134,8 @@ Total: 35 endpoints
 **Description:** Get the Cards on a Board that match a given filter. See [Nested Resources](/cloud/trello/guides/rest-api/nested-resources/) for more information.
 
 **Functions:**
-- **Bash:** `trello_get_filtered_cards_on_board`
-- **PowerShell:** `Invoke-TrelloGetFilteredCardsOnBoard`
+- **Bash:** `get_filtered_cards_on_board`
+- **PowerShell:** `Invoke-GetFilteredCardsOnBoard`
 
 **Parameters:**
 
@@ -155,8 +155,8 @@ Total: 35 endpoints
 **Description:** Get all of the checklists on a Board.
 
 **Functions:**
-- **Bash:** `trello_get_checklists_on_board`
-- **PowerShell:** `Invoke-TrelloGetChecklistsOnBoard`
+- **Bash:** `get_checklists_on_board`
+- **PowerShell:** `Invoke-GetChecklistsOnBoard`
 
 **Parameters:**
 
@@ -175,8 +175,8 @@ Total: 35 endpoints
 **Description:** Get all of the Labels on a Board.
 
 **Functions:**
-- **Bash:** `trello_get_labels_on_board`
-- **PowerShell:** `Invoke-TrelloGetLabelsOnBoard`
+- **Bash:** `get_labels_on_board`
+- **PowerShell:** `Invoke-GetLabelsOnBoard`
 
 **Parameters:**
 
@@ -197,8 +197,8 @@ Total: 35 endpoints
 **Description:** Get the Lists on a Board
 
 **Functions:**
-- **Bash:** `trello_get_lists_on_board`
-- **PowerShell:** `Invoke-TrelloGetListsOnBoard`
+- **Bash:** `get_lists_on_board`
+- **PowerShell:** `Invoke-GetListsOnBoard`
 
 **Parameters:**
 
@@ -218,8 +218,8 @@ Total: 35 endpoints
 **Endpoint:** `GET /boards/{id}/lists/{filter}`
 
 **Functions:**
-- **Bash:** `trello_get_filtered_lists_on_board`
-- **PowerShell:** `Invoke-TrelloGetFilteredListsOnBoard`
+- **Bash:** `get_filtered_lists_on_board`
+- **PowerShell:** `Invoke-GetFilteredListsOnBoard`
 
 **Parameters:**
 
@@ -239,8 +239,8 @@ Total: 35 endpoints
 **Description:** Get the Members for a board
 
 **Functions:**
-- **Bash:** `trello_get_members_board`
-- **PowerShell:** `Invoke-TrelloGetMembersBoard`
+- **Bash:** `get_members_board`
+- **PowerShell:** `Invoke-GetMembersBoard`
 
 ---
 
@@ -253,8 +253,8 @@ Total: 35 endpoints
 **Description:** Get information about the memberships users have to the board.
 
 **Functions:**
-- **Bash:** `trello_get_memberships_board`
-- **PowerShell:** `Invoke-TrelloGetMembershipsBoard`
+- **Bash:** `get_memberships_board`
+- **PowerShell:** `Invoke-GetMembershipsBoard`
 
 **Parameters:**
 
@@ -278,8 +278,8 @@ Total: 35 endpoints
 **Description:** List the Power-Ups on a board
 
 **Functions:**
-- **Bash:** `trello_get_powerups_on_board`
-- **PowerShell:** `Invoke-TrelloGetPowerupsOnBoard`
+- **Bash:** `get_powerups_on_board`
+- **PowerShell:** `Invoke-GetPowerupsOnBoard`
 
 **Parameters:**
 
@@ -299,8 +299,8 @@ Total: 35 endpoints
 **Description:** Get a single, specific field on a board
 
 **Functions:**
-- **Bash:** `trello_get_field_on_board`
-- **PowerShell:** `Invoke-TrelloGetFieldOnBoard`
+- **Bash:** `get_field_on_board`
+- **PowerShell:** `Invoke-GetFieldOnBoard`
 
 **Parameters:**
 
@@ -322,8 +322,8 @@ Total: 35 endpoints
 **Description:** Create a new board.
 
 **Functions:**
-- **Bash:** `trello_create_board`
-- **PowerShell:** `Invoke-TrelloCreateBoard`
+- **Bash:** `create_board`
+- **PowerShell:** `Invoke-CreateBoard`
 
 **Parameters:**
 
@@ -355,8 +355,8 @@ Total: 35 endpoints
 **Endpoint:** `POST /boards/{id}/boardPlugins`
 
 **Functions:**
-- **Bash:** `trello_enable_powerup_on_board`
-- **PowerShell:** `Invoke-TrelloEnablePowerupOnBoard`
+- **Bash:** `enable_powerup_on_board`
+- **PowerShell:** `Invoke-EnablePowerupOnBoard`
 
 **Parameters:**
 
@@ -375,8 +375,8 @@ Total: 35 endpoints
 **Description:** Create a new board.
 
 **Functions:**
-- **Bash:** `trello_create_calendarkey_for_board`
-- **PowerShell:** `Invoke-TrelloCreateCalendarkeyForBoard`
+- **Bash:** `create_calendarkey_for_board`
+- **PowerShell:** `Invoke-CreateCalendarkeyForBoard`
 
 **Parameters:**
 
@@ -393,8 +393,8 @@ Total: 35 endpoints
 **Endpoint:** `POST /boards/{id}/emailKey/generate`
 
 **Functions:**
-- **Bash:** `trello_create_emailkey_for_board`
-- **PowerShell:** `Invoke-TrelloCreateEmailkeyForBoard`
+- **Bash:** `create_emailkey_for_board`
+- **PowerShell:** `Invoke-CreateEmailkeyForBoard`
 
 **Parameters:**
 
@@ -411,8 +411,8 @@ Total: 35 endpoints
 **Endpoint:** `POST /boards/{id}/idTags`
 
 **Functions:**
-- **Bash:** `trello_create_tag_for_board`
-- **PowerShell:** `Invoke-TrelloCreateTagForBoard`
+- **Bash:** `create_tag_for_board`
+- **PowerShell:** `Invoke-CreateTagForBoard`
 
 **Parameters:**
 
@@ -432,8 +432,8 @@ Total: 35 endpoints
 **Description:** Create a new Label on a Board.
 
 **Functions:**
-- **Bash:** `trello_create_label_on_board`
-- **PowerShell:** `Invoke-TrelloCreateLabelOnBoard`
+- **Bash:** `create_label_on_board`
+- **PowerShell:** `Invoke-CreateLabelOnBoard`
 
 **Parameters:**
 
@@ -454,8 +454,8 @@ Total: 35 endpoints
 **Description:** Create a new List on a Board.
 
 **Functions:**
-- **Bash:** `trello_create_list_on_board`
-- **PowerShell:** `Invoke-TrelloCreateListOnBoard`
+- **Bash:** `create_list_on_board`
+- **PowerShell:** `Invoke-CreateListOnBoard`
 
 **Parameters:**
 
@@ -473,8 +473,8 @@ Total: 35 endpoints
 **Endpoint:** `POST /boards/{id}/markedAsViewed`
 
 **Functions:**
-- **Bash:** `trello_mark_board_as_viewed`
-- **PowerShell:** `Invoke-TrelloMarkBoardAsViewed`
+- **Bash:** `mark_board_as_viewed`
+- **PowerShell:** `Invoke-MarkBoardAsViewed`
 
 **Parameters:**
 
@@ -495,8 +495,8 @@ Total: 35 endpoints
 **Description:** Update an existing board by id
 
 **Functions:**
-- **Bash:** `trello_update_board`
-- **PowerShell:** `Invoke-TrelloUpdateBoard`
+- **Bash:** `update_board`
+- **PowerShell:** `Invoke-UpdateBoard`
 
 **Parameters:**
 
@@ -529,8 +529,8 @@ Total: 35 endpoints
 **Description:** Invite a Member to a Board via their email address.
 
 **Functions:**
-- **Bash:** `trello_invite_member_to_board_via_email`
-- **PowerShell:** `Invoke-TrelloInviteMemberToBoardViaEmail`
+- **Bash:** `invite_member_to_board_via_email`
+- **PowerShell:** `Invoke-InviteMemberToBoardViaEmail`
 
 **Parameters:**
 
@@ -550,8 +550,8 @@ Total: 35 endpoints
 **Description:** Add a member to the board.
 
 **Functions:**
-- **Bash:** `trello_add_member_to_board`
-- **PowerShell:** `Invoke-TrelloAddMemberToBoard`
+- **Bash:** `add_member_to_board`
+- **PowerShell:** `Invoke-AddMemberToBoard`
 
 **Parameters:**
 
@@ -571,8 +571,8 @@ Total: 35 endpoints
 **Description:** Update an existing board by id
 
 **Functions:**
-- **Bash:** `trello_update_membership_member_on_board`
-- **PowerShell:** `Invoke-TrelloUpdateMembershipMemberOnBoard`
+- **Bash:** `update_membership_member_on_board`
+- **PowerShell:** `Invoke-UpdateMembershipMemberOnBoard`
 
 **Parameters:**
 
@@ -592,8 +592,8 @@ Total: 35 endpoints
 **Endpoint:** `PUT /boards/{id}/myPrefs/emailPosition`
 
 **Functions:**
-- **Bash:** `trello_update_emailposition_pref_on_board`
-- **PowerShell:** `Invoke-TrelloUpdateEmailpositionPrefOnBoard`
+- **Bash:** `update_emailposition_pref_on_board`
+- **PowerShell:** `Invoke-UpdateEmailpositionPrefOnBoard`
 
 **Parameters:**
 
@@ -613,8 +613,8 @@ Total: 35 endpoints
 **Description:** Change the default list that email-to-board cards are created in.
 
 **Functions:**
-- **Bash:** `trello_update_idemaillist_pref_on_board`
-- **PowerShell:** `Invoke-TrelloUpdateIdemaillistPrefOnBoard`
+- **Bash:** `update_idemaillist_pref_on_board`
+- **PowerShell:** `Invoke-UpdateIdemaillistPrefOnBoard`
 
 **Parameters:**
 
@@ -632,8 +632,8 @@ Total: 35 endpoints
 **Endpoint:** `PUT /boards/{id}/myPrefs/showSidebar`
 
 **Functions:**
-- **Bash:** `trello_update_showsidebar_pref_on_board`
-- **PowerShell:** `Invoke-TrelloUpdateShowsidebarPrefOnBoard`
+- **Bash:** `update_showsidebar_pref_on_board`
+- **PowerShell:** `Invoke-UpdateShowsidebarPrefOnBoard`
 
 **Parameters:**
 
@@ -651,8 +651,8 @@ Total: 35 endpoints
 **Endpoint:** `PUT /boards/{id}/myPrefs/showSidebarActivity`
 
 **Functions:**
-- **Bash:** `trello_update_showsidebaractivity_pref_on_board`
-- **PowerShell:** `Invoke-TrelloUpdateShowsidebaractivityPrefOnBoard`
+- **Bash:** `update_showsidebaractivity_pref_on_board`
+- **PowerShell:** `Invoke-UpdateShowsidebaractivityPrefOnBoard`
 
 **Parameters:**
 
@@ -670,8 +670,8 @@ Total: 35 endpoints
 **Endpoint:** `PUT /boards/{id}/myPrefs/showSidebarBoardActions`
 
 **Functions:**
-- **Bash:** `trello_update_showsidebarboardactions_pref_on_board`
-- **PowerShell:** `Invoke-TrelloUpdateShowsidebarboardactionsPrefOnBoard`
+- **Bash:** `update_showsidebarboardactions_pref_on_board`
+- **PowerShell:** `Invoke-UpdateShowsidebarboardactionsPrefOnBoard`
 
 **Parameters:**
 
@@ -689,8 +689,8 @@ Total: 35 endpoints
 **Endpoint:** `PUT /boards/{id}/myPrefs/showSidebarMembers`
 
 **Functions:**
-- **Bash:** `trello_update_showsidebarmembers_pref_on_board`
-- **PowerShell:** `Invoke-TrelloUpdateShowsidebarmembersPrefOnBoard`
+- **Bash:** `update_showsidebarmembers_pref_on_board`
+- **PowerShell:** `Invoke-UpdateShowsidebarmembersPrefOnBoard`
 
 **Parameters:**
 
@@ -712,8 +712,8 @@ Total: 35 endpoints
 **Description:** Delete a board.
 
 **Functions:**
-- **Bash:** `trello_delete_board`
-- **PowerShell:** `Invoke-TrelloDeleteBoard`
+- **Bash:** `delete_board`
+- **PowerShell:** `Invoke-DeleteBoard`
 
 **Parameters:**
 
@@ -732,8 +732,8 @@ Total: 35 endpoints
 **Description:** Disable a Power-Up on a board
 
 **Functions:**
-- **Bash:** `trello_disable_powerup_on_board`
-- **PowerShell:** `Invoke-TrelloDisablePowerupOnBoard`
+- **Bash:** `disable_powerup_on_board`
+- **PowerShell:** `Invoke-DisablePowerupOnBoard`
 
 **Parameters:**
 
@@ -751,7 +751,7 @@ Total: 35 endpoints
 **Endpoint:** `DELETE /boards/{id}/members/{idMember}`
 
 **Functions:**
-- **Bash:** `trello_remove_member_from_board`
-- **PowerShell:** `Invoke-TrelloRemoveMemberFromBoard`
+- **Bash:** `remove_member_from_board`
+- **PowerShell:** `Invoke-RemoveMemberFromBoard`
 
 ---

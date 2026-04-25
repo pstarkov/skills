@@ -13,8 +13,8 @@ Total: 21 endpoints
 **Description:** Get an enterprise by its ID.
 
 **Functions:**
-- **Bash:** `trello_get_enterprise`
-- **PowerShell:** `Invoke-TrelloGetEnterprise`
+- **Bash:** `get_enterprise`
+- **PowerShell:** `Invoke-GetEnterprise`
 
 **Parameters:**
 
@@ -46,8 +46,8 @@ Total: 21 endpoints
 **Description:** Get an enterprise's admin members.
 
 **Functions:**
-- **Bash:** `trello_get_enterprise_admin_members`
-- **PowerShell:** `Invoke-TrelloGetEnterpriseAdminMembers`
+- **Bash:** `get_enterprise_admin_members`
+- **PowerShell:** `Invoke-GetEnterpriseAdminMembers`
 
 **Parameters:**
 
@@ -67,8 +67,8 @@ Total: 21 endpoints
 **Description:** Returns an array of Actions related to the Enterprise object. Used for populating data sent to Google Sheets from an Enterprise's audit log page: https://trello.com/e/{enterprise_name}/admin/auditlog....
 
 **Functions:**
-- **Bash:** `trello_get_auditlog_data_for_enterprise`
-- **PowerShell:** `Invoke-TrelloGetAuditlogDataForEnterprise`
+- **Bash:** `get_auditlog_data_for_enterprise`
+- **PowerShell:** `Invoke-GetAuditlogDataForEnterprise`
 
 **Parameters:**
 
@@ -87,8 +87,8 @@ Total: 21 endpoints
 **Description:** Get the Workspaces that are claimable by the enterprise by ID. Can optionally query for workspaces based on activeness/ inactiveness.
 
 **Functions:**
-- **Bash:** `trello_get_claimableorganizations_enterprise`
-- **PowerShell:** `Invoke-TrelloGetClaimableorganizationsEnterprise`
+- **Bash:** `get_claimableorganizations_enterprise`
+- **PowerShell:** `Invoke-GetClaimableorganizationsEnterprise`
 
 **Parameters:**
 
@@ -112,8 +112,8 @@ Total: 21 endpoints
 **Description:** Get the members of an enterprise.
 
 **Functions:**
-- **Bash:** `trello_get_members_enterprise`
-- **PowerShell:** `Invoke-TrelloGetMembersEnterprise`
+- **Bash:** `get_members_enterprise`
+- **PowerShell:** `Invoke-GetMembersEnterprise`
 
 **Parameters:**
 
@@ -141,8 +141,8 @@ Total: 21 endpoints
 **Description:** Get an enterprise's users. You can choose to retrieve licensed members, board guests, etc. The response is paginated and will return 100 users at a time.
 
 **Functions:**
-- **Bash:** `trello_get_users_enterprise`
-- **PowerShell:** `Invoke-TrelloGetUsersEnterprise`
+- **Bash:** `get_users_enterprise`
+- **PowerShell:** `Invoke-GetUsersEnterprise`
 
 **Parameters:**
 
@@ -170,8 +170,8 @@ Total: 21 endpoints
 **Description:** Get a specific member of an enterprise by ID.
 
 **Functions:**
-- **Bash:** `trello_get_member_enterprise`
-- **PowerShell:** `Invoke-TrelloGetMemberEnterprise`
+- **Bash:** `get_member_enterprise`
+- **PowerShell:** `Invoke-GetMemberEnterprise`
 
 **Parameters:**
 
@@ -194,8 +194,8 @@ Total: 21 endpoints
 **Description:** Get the organizations of an enterprise.
 
 **Functions:**
-- **Bash:** `trello_get_organizations_enterprise`
-- **PowerShell:** `Invoke-TrelloGetOrganizationsEnterprise`
+- **Bash:** `get_organizations_enterprise`
+- **PowerShell:** `Invoke-GetOrganizationsEnterprise`
 
 **Parameters:**
 
@@ -220,8 +220,8 @@ Total: 21 endpoints
  NOTE: For enterprises that have opted in to user management via AdminHub, this endpoint will result in organizations being added to the enterprise ...
 
 **Functions:**
-- **Bash:** `trello_bulk_accept_set_organizations_to_enterprise`
-- **PowerShell:** `Invoke-TrelloBulkAcceptSetOrganizationsToEnterprise`
+- **Bash:** `bulk_accept_set_organizations_to_enterprise`
+- **PowerShell:** `Invoke-BulkAcceptSetOrganizationsToEnterprise`
 
 **Parameters:**
 
@@ -241,8 +241,8 @@ Total: 21 endpoints
 **Description:** Get the Workspaces that are pending for the enterprise by ID.
 
 **Functions:**
-- **Bash:** `trello_get_pendingorganizations_enterprise`
-- **PowerShell:** `Invoke-TrelloGetPendingorganizationsEnterprise`
+- **Bash:** `get_pendingorganizations_enterprise`
+- **PowerShell:** `Invoke-GetPendingorganizationsEnterprise`
 
 **Parameters:**
 
@@ -263,8 +263,8 @@ Total: 21 endpoints
 **Description:** Get the signup URL for an enterprise.
 
 **Functions:**
-- **Bash:** `trello_get_signupurl_for_enterprise`
-- **PowerShell:** `Invoke-TrelloGetSignupurlForEnterprise`
+- **Bash:** `get_signupurl_for_enterprise`
+- **PowerShell:** `Invoke-GetSignupurlForEnterprise`
 
 **Parameters:**
 
@@ -287,8 +287,8 @@ Total: 21 endpoints
 **Description:** Get a list of organizations that can be transferred to an enterprise when given a bulk list of organizations.
 
 **Functions:**
-- **Bash:** `trello_get_bulk_list_organizations_that_can_be_transferred_to_enterprise`
-- **PowerShell:** `Invoke-TrelloGetBulkListOrganizationsThatCanBeTransferredToEnterprise`
+- **Bash:** `get_bulk_list_organizations_that_can_be_transferred_to_enterprise`
+- **PowerShell:** `Invoke-GetBulkListOrganizationsThatCanBeTransferredToEnterprise`
 
 **Parameters:**
 
@@ -306,8 +306,8 @@ Total: 21 endpoints
 **Endpoint:** `GET /enterprises/{id}/transferrable/organization/{idOrganization}`
 
 **Functions:**
-- **Bash:** `trello_get_whether_organization_can_be_transferred_to_enterprise`
-- **PowerShell:** `Invoke-TrelloGetWhetherOrganizationCanBeTransferredToEnterprise`
+- **Bash:** `get_whether_organization_can_be_transferred_to_enterprise`
+- **PowerShell:** `Invoke-GetWhetherOrganizationCanBeTransferredToEnterprise`
 
 **Parameters:**
 
@@ -327,8 +327,8 @@ Total: 21 endpoints
 **Endpoint:** `POST /enterprises/{id}/tokens`
 
 **Functions:**
-- **Bash:** `trello_create_auth_token_for_enterprise`
-- **PowerShell:** `Invoke-TrelloCreateAuthTokenForEnterprise`
+- **Bash:** `create_auth_token_for_enterprise`
+- **PowerShell:** `Invoke-CreateAuthTokenForEnterprise`
 
 **Parameters:**
 
@@ -350,8 +350,8 @@ Total: 21 endpoints
 **Description:** Decline enterpriseJoinRequests from one organization or bulk amount of organizations
 
 **Functions:**
-- **Bash:** `trello_decline_enterprisejoinrequests_from_one_organization_or_bulk_list_organizations`
-- **PowerShell:** `Invoke-TrelloDeclineEnterprisejoinrequestsFromOneOrganizationOrBulkListOrganizations`
+- **Bash:** `decline_enterprisejoinrequests_from_one_organization_or_bulk_list_organizations`
+- **PowerShell:** `Invoke-DeclineEnterprisejoinrequestsFromOneOrganizationOrBulkListOrganizations`
 
 **Parameters:**
 
@@ -373,8 +373,8 @@ Total: 21 endpoints
  NOTE: This endpoint is not available to enterprises that have opted in to user management via AdminHub.
 
 **Functions:**
-- **Bash:** `trello_update_member_to_be_admin_enterprise`
-- **PowerShell:** `Invoke-TrelloUpdateMemberToBeAdminEnterprise`
+- **Bash:** `update_member_to_be_admin_enterprise`
+- **PowerShell:** `Invoke-UpdateMemberToBeAdminEnterprise`
 
 **Parameters:**
 
@@ -396,8 +396,8 @@ Total: 21 endpoints
  NOTE: Deactivation is not possible for enterprises that have opted in to user management via AdminHub.
 
 **Functions:**
-- **Bash:** `trello_deactivate_member_enterprise`
-- **PowerShell:** `Invoke-TrelloDeactivateMemberEnterprise`
+- **Bash:** `deactivate_member_enterprise`
+- **PowerShell:** `Invoke-DeactivateMemberEnterprise`
 
 **Parameters:**
 
@@ -423,8 +423,8 @@ Total: 21 endpoints
  NOTE: Revokin...
 
 **Functions:**
-- **Bash:** `trello_update_members_licensed_status`
-- **PowerShell:** `Invoke-TrelloUpdateMembersLicensedStatus`
+- **Bash:** `update_members_licensed_status`
+- **PowerShell:** `Invoke-UpdateMembersLicensedStatus`
 
 **Parameters:**
 
@@ -447,8 +447,8 @@ Total: 21 endpoints
  NOTE: For enterprises that have opted in to user management via AdminHub, this endpoint will result in the organization being added to the enterprise async...
 
 **Functions:**
-- **Bash:** `trello_transfer_organization_to_enterprise`
-- **PowerShell:** `Invoke-TrelloTransferOrganizationToEnterprise`
+- **Bash:** `transfer_organization_to_enterprise`
+- **PowerShell:** `Invoke-TransferOrganizationToEnterprise`
 
 **Parameters:**
 
@@ -472,8 +472,8 @@ Total: 21 endpoints
  NOTE: This endpoint is not available to enterprises that have opted in to user management via AdminHub.
 
 **Functions:**
-- **Bash:** `trello_remove_member_as_admin_from_enterprise`
-- **PowerShell:** `Invoke-TrelloRemoveMemberAsAdminFromEnterprise`
+- **Bash:** `remove_member_as_admin_from_enterprise`
+- **PowerShell:** `Invoke-RemoveMemberAsAdminFromEnterprise`
 
 **Parameters:**
 
@@ -493,8 +493,8 @@ Total: 21 endpoints
 **Description:** Remove an organization from an enterprise.
 
 **Functions:**
-- **Bash:** `trello_delete_organization_from_enterprise`
-- **PowerShell:** `Invoke-TrelloDeleteOrganizationFromEnterprise`
+- **Bash:** `delete_organization_from_enterprise`
+- **PowerShell:** `Invoke-DeleteOrganizationFromEnterprise`
 
 **Parameters:**
 

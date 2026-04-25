@@ -13,8 +13,8 @@ Total: 16 endpoints
 **Description:** List reactions for an action
 
 **Functions:**
-- **Bash:** `trello_get_actions_reactions`
-- **PowerShell:** `Invoke-TrelloGetActionsReactions`
+- **Bash:** `get_actions_reactions`
+- **PowerShell:** `Invoke-GetActionsReactions`
 
 **Parameters:**
 
@@ -34,8 +34,8 @@ Total: 16 endpoints
 **Description:** Get information for a reaction
 
 **Functions:**
-- **Bash:** `trello_get_actions_reaction`
-- **PowerShell:** `Invoke-TrelloGetActionsReaction`
+- **Bash:** `get_actions_reaction`
+- **PowerShell:** `Invoke-GetActionsReaction`
 
 **Parameters:**
 
@@ -55,8 +55,8 @@ Total: 16 endpoints
 **Description:** List a summary of all reactions for an action
 
 **Functions:**
-- **Bash:** `trello_list_actions_summary_reactions`
-- **PowerShell:** `Invoke-TrelloListActionsSummaryReactions`
+- **Bash:** `list_actions_summary_reactions`
+- **PowerShell:** `Invoke-ListActionsSummaryReactions`
 
 **Parameters:**
 
@@ -73,8 +73,8 @@ Total: 16 endpoints
 **Endpoint:** `GET /actions/{id}`
 
 **Functions:**
-- **Bash:** `trello_get_action`
-- **PowerShell:** `Invoke-TrelloGetAction`
+- **Bash:** `get_action`
+- **PowerShell:** `Invoke-GetAction`
 
 **Parameters:**
 
@@ -97,8 +97,8 @@ Total: 16 endpoints
 **Endpoint:** `GET /actions/{id}/board`
 
 **Functions:**
-- **Bash:** `trello_get_board_for_action`
-- **PowerShell:** `Invoke-TrelloGetBoardForAction`
+- **Bash:** `get_board_for_action`
+- **PowerShell:** `Invoke-GetBoardForAction`
 
 **Parameters:**
 
@@ -118,8 +118,8 @@ Total: 16 endpoints
 **Description:** Get the card for an action
 
 **Functions:**
-- **Bash:** `trello_get_card_for_action`
-- **PowerShell:** `Invoke-TrelloGetCardForAction`
+- **Bash:** `get_card_for_action`
+- **PowerShell:** `Invoke-GetCardForAction`
 
 **Parameters:**
 
@@ -137,8 +137,8 @@ Total: 16 endpoints
 **Endpoint:** `GET /actions/{id}/list`
 
 **Functions:**
-- **Bash:** `trello_get_list_for_action`
-- **PowerShell:** `Invoke-TrelloGetListForAction`
+- **Bash:** `get_list_for_action`
+- **PowerShell:** `Invoke-GetListForAction`
 
 **Parameters:**
 
@@ -158,8 +158,8 @@ Total: 16 endpoints
 **Description:** Gets the member of an action (not the creator)
 
 **Functions:**
-- **Bash:** `trello_get_member_action`
-- **PowerShell:** `Invoke-TrelloGetMemberAction`
+- **Bash:** `get_member_action`
+- **PowerShell:** `Invoke-GetMemberAction`
 
 **Parameters:**
 
@@ -179,8 +179,8 @@ Total: 16 endpoints
 **Description:** Get the Member who created the Action
 
 **Functions:**
-- **Bash:** `trello_get_member_creator_action`
-- **PowerShell:** `Invoke-TrelloGetMemberCreatorAction`
+- **Bash:** `get_member_creator_action`
+- **PowerShell:** `Invoke-GetMemberCreatorAction`
 
 **Parameters:**
 
@@ -198,8 +198,8 @@ Total: 16 endpoints
 **Endpoint:** `GET /actions/{id}/organization`
 
 **Functions:**
-- **Bash:** `trello_get_organization_action`
-- **PowerShell:** `Invoke-TrelloGetOrganizationAction`
+- **Bash:** `get_organization_action`
+- **PowerShell:** `Invoke-GetOrganizationAction`
 
 **Parameters:**
 
@@ -219,8 +219,8 @@ Total: 16 endpoints
 **Description:** Get a specific property of an action
 
 **Functions:**
-- **Bash:** `trello_get_specific_field_on_action`
-- **PowerShell:** `Invoke-TrelloGetSpecificFieldOnAction`
+- **Bash:** `get_specific_field_on_action`
+- **PowerShell:** `Invoke-GetSpecificFieldOnAction`
 
 **Parameters:**
 
@@ -242,8 +242,8 @@ Total: 16 endpoints
 **Description:** Adds a new reaction to an action
 
 **Functions:**
-- **Bash:** `trello_create_reaction_for_action`
-- **PowerShell:** `Invoke-TrelloCreateReactionForAction`
+- **Bash:** `create_reaction_for_action`
+- **PowerShell:** `Invoke-CreateReactionForAction`
 
 ---
 
@@ -258,8 +258,8 @@ Total: 16 endpoints
 **Description:** Update a specific Action. Only comment actions can be updated. Used to edit the content of a comment.
 
 **Functions:**
-- **Bash:** `trello_update_action`
-- **PowerShell:** `Invoke-TrelloUpdateAction`
+- **Bash:** `update_action`
+- **PowerShell:** `Invoke-UpdateAction`
 
 **Parameters:**
 
@@ -278,8 +278,8 @@ Total: 16 endpoints
 **Description:** Update a comment action
 
 **Functions:**
-- **Bash:** `trello_update_comment_action`
-- **PowerShell:** `Invoke-TrelloUpdateCommentAction`
+- **Bash:** `update_comment_action`
+- **PowerShell:** `Invoke-UpdateCommentAction`
 
 **Parameters:**
 
@@ -301,8 +301,8 @@ Total: 16 endpoints
 **Description:** Deletes a reaction
 
 **Functions:**
-- **Bash:** `trello_delete_actions_reaction`
-- **PowerShell:** `Invoke-TrelloDeleteActionsReaction`
+- **Bash:** `delete_actions_reaction`
+- **PowerShell:** `Invoke-DeleteActionsReaction`
 
 ---
 
@@ -315,7 +315,7 @@ Total: 16 endpoints
 **Description:** Delete a specific action. Only comment actions can be deleted.
 
 **Functions:**
-- **Bash:** `trello_delete_action`
-- **PowerShell:** `Invoke-TrelloDeleteAction`
+- **Bash:** `delete_action`
+- **PowerShell:** `Invoke-DeleteAction`
 
 ---

@@ -100,12 +100,12 @@ Do not start by searching members. Treat this as a board/card lookup:
    - If the user gave a board ID or Trello board URL, use it directly with the Boards endpoints.
    - If the user gave only a board name, list accessible boards through the Boards flow and match by `name` or `url`.
 2. Use the resolved board ID with `GET /boards/{id}/cards`.
-   - Bash: `trello_get_cards_on_board id=<board_id> fields=name,desc,url,idList,closed`
-   - PowerShell: `Invoke-TrelloGetCardsOnBoard -Id <board_id> -Query "fields=name,desc,url,idList,closed"`
+   - Bash: `get_cards_on_board id=<board_id> fields=name,desc,url,idList,closed`
+   - PowerShell: `Invoke-GetCardsOnBoard -Id <board_id> -Query "fields=name,desc,url,idList,closed"`
 3. Find the requested card by exact or close `name` match.
 4. Read details with `GET /cards/{id}` only after the card ID is known.
-   - Bash: `trello_get_card id=<card_id> fields=name,desc,url,idBoard,idList,closed`
-   - PowerShell: `Invoke-TrelloGetCard -Id <card_id> -Query "fields=name,desc,url,idBoard,idList,closed"`
+   - Bash: `get_card id=<card_id> fields=name,desc,url,idBoard,idList,closed`
+   - PowerShell: `Invoke-GetCard -Id <card_id> -Query "fields=name,desc,url,idBoard,idList,closed"`
 
 ### Choose the right resource first
 
@@ -127,8 +127,8 @@ export TRELLO_TOKEN="your_api_token"
 source scripts/trello.sh
 
 # Make API calls using endpoint functions
-trello_get_card id=abc123
-trello_create_new_card idList=xyz123 '{"name":"Card Name","desc":"Description"}'
+get_card id=abc123
+create_new_card idList=xyz123 '{"name":"Card Name","desc":"Description"}'
 ```
 
 **Bash Helper Functions:**
@@ -143,8 +143,8 @@ $env:TRELLO_TOKEN = "your_api_token"
 . ./scripts/trello.ps1
 
 # Make API calls using endpoint functions
-Invoke-TrelloGetCard -Id abc123 -Query "fields=name,desc"
-Invoke-TrelloCreateNewCard -Query "idList=xyz123" -Body '{"name":"Card Name","desc":"Description"}'
+Invoke-GetCard -Id abc123 -Query "fields=name,desc"
+Invoke-CreateNewCard -Query "idList=xyz123" -Body '{"name":"Card Name","desc":"Description"}'
 ```
 
 **PowerShell Helper Functions:**

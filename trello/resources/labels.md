@@ -13,8 +13,8 @@ Total: 5 endpoints
 **Description:** Get information about a single Label.
 
 **Functions:**
-- **Bash:** `trello_get_label`
-- **PowerShell:** `Invoke-TrelloGetLabel`
+- **Bash:** `get_label`
+- **PowerShell:** `Invoke-GetLabel`
 
 **Parameters:**
 
@@ -35,8 +35,8 @@ Total: 5 endpoints
 **Description:** Create a new Label on a Board.
 
 **Functions:**
-- **Bash:** `trello_create_label`
-- **PowerShell:** `Invoke-TrelloCreateLabel`
+- **Bash:** `create_label`
+- **PowerShell:** `Invoke-CreateLabel`
 
 **Parameters:**
 
@@ -59,8 +59,8 @@ Total: 5 endpoints
 **Description:** Update a label by ID.
 
 **Functions:**
-- **Bash:** `trello_update_label`
-- **PowerShell:** `Invoke-TrelloUpdateLabel`
+- **Bash:** `update_label`
+- **PowerShell:** `Invoke-UpdateLabel`
 
 **Parameters:**
 
@@ -80,8 +80,8 @@ Total: 5 endpoints
 **Description:** Update a field on a label.
 
 **Functions:**
-- **Bash:** `trello_update_field_on_label`
-- **PowerShell:** `Invoke-TrelloUpdateFieldOnLabel`
+- **Bash:** `update_field_on_label`
+- **PowerShell:** `Invoke-UpdateFieldOnLabel`
 
 **Parameters:**
 
@@ -104,7 +104,7 @@ Total: 5 endpoints
 **Description:** Delete a label by ID.
 
 **Functions:**
-- **Bash:** `trello_delete_label`
-- **PowerShell:** `Invoke-TrelloDeleteLabel`
+- **Bash:** `delete_label`
+- **PowerShell:** `Invoke-DeleteLabel`
 
 ---

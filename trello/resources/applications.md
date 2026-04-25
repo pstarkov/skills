@@ -11,7 +11,7 @@ Total: 1 endpoints
 **Endpoint:** `GET /applications/{key}/compliance`
 
 **Functions:**
-- **Bash:** `trello_get_applications_compliance_data`
-- **PowerShell:** `Invoke-TrelloGetApplicationsComplianceData`
+- **Bash:** `get_applications_compliance_data`
+- **PowerShell:** `Invoke-GetApplicationsComplianceData`
 
 ---

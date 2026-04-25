@@ -13,8 +13,8 @@ Total: 5 endpoints
 **Description:** Get a webhook by ID. You must use the token query parameter and pass in the token the webhook was created under, or else you will encounter a 'webhook does not belong to token' error.
 
 **Functions:**
-- **Bash:** `trello_get_webhook`
-- **PowerShell:** `Invoke-TrelloGetWebhook`
+- **Bash:** `get_webhook`
+- **PowerShell:** `Invoke-GetWebhook`
 
 ---
 
@@ -25,8 +25,8 @@ Total: 5 endpoints
 **Endpoint:** `GET /webhooks/{id}/{field}`
 
 **Functions:**
-- **Bash:** `trello_get_field_on_webhook`
-- **PowerShell:** `Invoke-TrelloGetFieldOnWebhook`
+- **Bash:** `get_field_on_webhook`
+- **PowerShell:** `Invoke-GetFieldOnWebhook`
 
 **Parameters:**
 
@@ -48,8 +48,8 @@ Total: 5 endpoints
 **Description:** Create a new webhook.
 
 **Functions:**
-- **Bash:** `trello_create_webhook`
-- **PowerShell:** `Invoke-TrelloCreateWebhook`
+- **Bash:** `create_webhook`
+- **PowerShell:** `Invoke-CreateWebhook`
 
 **Parameters:**
 
@@ -73,8 +73,8 @@ Total: 5 endpoints
 **Description:** Update a webhook by ID.
 
 **Functions:**
-- **Bash:** `trello_update_webhook`
-- **PowerShell:** `Invoke-TrelloUpdateWebhook`
+- **Bash:** `update_webhook`
+- **PowerShell:** `Invoke-UpdateWebhook`
 
 **Parameters:**
 
@@ -98,7 +98,7 @@ Total: 5 endpoints
 **Description:** Delete a webhook by ID.
 
 **Functions:**
-- **Bash:** `trello_delete_webhook`
-- **PowerShell:** `Invoke-TrelloDeleteWebhook`
+- **Bash:** `delete_webhook`
+- **PowerShell:** `Invoke-DeleteWebhook`
 
 ---

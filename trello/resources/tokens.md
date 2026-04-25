@@ -13,8 +13,8 @@ Total: 8 endpoints
 **Description:** Retrieve information about a token.
 
 **Functions:**
-- **Bash:** `trello_get_token`
-- **PowerShell:** `Invoke-TrelloGetToken`
+- **Bash:** `get_token`
+- **PowerShell:** `Invoke-GetToken`
 
 **Parameters:**
 
@@ -35,8 +35,8 @@ Total: 8 endpoints
 **Description:** Retrieve information about a token's owner by token.
 
 **Functions:**
-- **Bash:** `trello_get_tokens_member`
-- **PowerShell:** `Invoke-TrelloGetTokensMember`
+- **Bash:** `get_tokens_member`
+- **PowerShell:** `Invoke-GetTokensMember`
 
 **Parameters:**
 
@@ -56,8 +56,8 @@ Total: 8 endpoints
 **Description:** Retrieve all webhooks created with a Token.
 
 **Functions:**
-- **Bash:** `trello_get_webhooks_for_token`
-- **PowerShell:** `Invoke-TrelloGetWebhooksForToken`
+- **Bash:** `get_webhooks_for_token`
+- **PowerShell:** `Invoke-GetWebhooksForToken`
 
 ---
 
@@ -70,8 +70,8 @@ Total: 8 endpoints
 **Description:** Retrieve a webhook created with a Token.
 
 **Functions:**
-- **Bash:** `trello_get_webhook_belonging_to_token`
-- **PowerShell:** `Invoke-TrelloGetWebhookBelongingToToken`
+- **Bash:** `get_webhook_belonging_to_token`
+- **PowerShell:** `Invoke-GetWebhookBelongingToToken`
 
 ---
 
@@ -86,8 +86,8 @@ Total: 8 endpoints
 **Description:** Create a new webhook for a Token.
 
 **Functions:**
-- **Bash:** `trello_create_webhooks_for_token`
-- **PowerShell:** `Invoke-TrelloCreateWebhooksForToken`
+- **Bash:** `create_webhooks_for_token`
+- **PowerShell:** `Invoke-CreateWebhooksForToken`
 
 **Parameters:**
 
@@ -108,8 +108,8 @@ Total: 8 endpoints
 **Endpoint:** `PUT /tokens/{token}/webhooks/{idWebhook}`
 
 **Functions:**
-- **Bash:** `trello_update_webhook_created_by_token`
-- **PowerShell:** `Invoke-TrelloUpdateWebhookCreatedByToken`
+- **Bash:** `update_webhook_created_by_token`
+- **PowerShell:** `Invoke-UpdateWebhookCreatedByToken`
 
 **Parameters:**
 
@@ -132,8 +132,8 @@ Total: 8 endpoints
 **Description:** Delete a token.
 
 **Functions:**
-- **Bash:** `trello_delete_token`
-- **PowerShell:** `Invoke-TrelloDeleteToken`
+- **Bash:** `delete_token`
+- **PowerShell:** `Invoke-DeleteToken`
 
 **Parameters:**
 
@@ -152,7 +152,7 @@ Total: 8 endpoints
 **Description:** Delete a webhook created with given token.
 
 **Functions:**
-- **Bash:** `trello_delete_webhook_created_by_token`
-- **PowerShell:** `Invoke-TrelloDeleteWebhookCreatedByToken`
+- **Bash:** `delete_webhook_created_by_token`
+- **PowerShell:** `Invoke-DeleteWebhookCreatedByToken`
 
 ---

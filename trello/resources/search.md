@@ -13,8 +13,8 @@ Total: 2 endpoints
 **Description:** Find what you're looking for in Trello
 
 **Functions:**
-- **Bash:** `trello_search_trello`
-- **PowerShell:** `Invoke-TrelloSearchTrello`
+- **Bash:** `search_trello`
+- **PowerShell:** `Invoke-SearchTrello`
 
 **Parameters:**
 
@@ -53,8 +53,8 @@ Total: 2 endpoints
 **Description:** Search for Trello members.
 
 **Functions:**
-- **Bash:** `trello_search_for_members`
-- **PowerShell:** `Invoke-TrelloSearchForMembers`
+- **Bash:** `search_for_members`
+- **PowerShell:** `Invoke-SearchForMembers`
 
 **Parameters:**
 

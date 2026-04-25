@@ -11,8 +11,8 @@ Total: 11 endpoints
 **Endpoint:** `GET /notifications/{id}`
 
 **Functions:**
-- **Bash:** `trello_get_notification`
-- **PowerShell:** `Invoke-TrelloGetNotification`
+- **Bash:** `get_notification`
+- **PowerShell:** `Invoke-GetNotification`
 
 **Parameters:**
 
@@ -45,8 +45,8 @@ Total: 11 endpoints
 **Description:** Get the board a notification is associated with
 
 **Functions:**
-- **Bash:** `trello_get_board_notification_is_on`
-- **PowerShell:** `Invoke-TrelloGetBoardNotificationIsOn`
+- **Bash:** `get_board_notification_is_on`
+- **PowerShell:** `Invoke-GetBoardNotificationIsOn`
 
 **Parameters:**
 
@@ -66,8 +66,8 @@ Total: 11 endpoints
 **Description:** Get the card a notification is associated with
 
 **Functions:**
-- **Bash:** `trello_get_card_notification_is_on`
-- **PowerShell:** `Invoke-TrelloGetCardNotificationIsOn`
+- **Bash:** `get_card_notification_is_on`
+- **PowerShell:** `Invoke-GetCardNotificationIsOn`
 
 **Parameters:**
 
@@ -87,8 +87,8 @@ Total: 11 endpoints
 **Description:** Get the list a notification is associated with
 
 **Functions:**
-- **Bash:** `trello_get_list_notification_is_on`
-- **PowerShell:** `Invoke-TrelloGetListNotificationIsOn`
+- **Bash:** `get_list_notification_is_on`
+- **PowerShell:** `Invoke-GetListNotificationIsOn`
 
 **Parameters:**
 
@@ -108,8 +108,8 @@ Total: 11 endpoints
 **Description:** Get the member (not the creator) a notification is about
 
 **Functions:**
-- **Bash:** `trello_get_member_notification_is_about_not_creator`
-- **PowerShell:** `Invoke-TrelloGetMemberNotificationIsAboutNotCreator`
+- **Bash:** `get_member_notification_is_about_not_creator`
+- **PowerShell:** `Invoke-GetMemberNotificationIsAboutNotCreator`
 
 **Parameters:**
 
@@ -129,8 +129,8 @@ Total: 11 endpoints
 **Description:** Get the member who created the notification
 
 **Functions:**
-- **Bash:** `trello_get_member_who_created_notification`
-- **PowerShell:** `Invoke-TrelloGetMemberWhoCreatedNotification`
+- **Bash:** `get_member_who_created_notification`
+- **PowerShell:** `Invoke-GetMemberWhoCreatedNotification`
 
 **Parameters:**
 
@@ -150,8 +150,8 @@ Total: 11 endpoints
 **Description:** Get the organization a notification is associated with
 
 **Functions:**
-- **Bash:** `trello_get_notifications_associated_organization`
-- **PowerShell:** `Invoke-TrelloGetNotificationsAssociatedOrganization`
+- **Bash:** `get_notifications_associated_organization`
+- **PowerShell:** `Invoke-GetNotificationsAssociatedOrganization`
 
 **Parameters:**
 
@@ -171,8 +171,8 @@ Total: 11 endpoints
 **Description:** Get a specific property of a notification
 
 **Functions:**
-- **Bash:** `trello_get_field_notification`
-- **PowerShell:** `Invoke-TrelloGetFieldNotification`
+- **Bash:** `get_field_notification`
+- **PowerShell:** `Invoke-GetFieldNotification`
 
 **Parameters:**
 
@@ -194,8 +194,8 @@ Total: 11 endpoints
 **Description:** Mark all notifications as read
 
 **Functions:**
-- **Bash:** `trello_mark_all_notifications_as_read`
-- **PowerShell:** `Invoke-TrelloMarkAllNotificationsAsRead`
+- **Bash:** `mark_all_notifications_as_read`
+- **PowerShell:** `Invoke-MarkAllNotificationsAsRead`
 
 **Parameters:**
 
@@ -217,8 +217,8 @@ Total: 11 endpoints
 **Description:** Update the read status of a notification
 
 **Functions:**
-- **Bash:** `trello_update_notification`
-- **PowerShell:** `Invoke-TrelloUpdateNotification`
+- **Bash:** `update_notification`
+- **PowerShell:** `Invoke-UpdateNotification`
 
 **Parameters:**
 
@@ -236,8 +236,8 @@ Total: 11 endpoints
 **Endpoint:** `PUT /notifications/{id}/unread`
 
 **Functions:**
-- **Bash:** `trello_mark_notification_unread`
-- **PowerShell:** `Invoke-TrelloMarkNotificationUnread`
+- **Bash:** `mark_notification_unread`
+- **PowerShell:** `Invoke-MarkNotificationUnread`
 
 **Parameters:**
 

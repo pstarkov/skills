@@ -11,8 +11,8 @@ Total: 26 endpoints
 **Endpoint:** `GET /organizations/{id}`
 
 **Functions:**
-- **Bash:** `trello_get_organization`
-- **PowerShell:** `Invoke-TrelloGetOrganization`
+- **Bash:** `get_organization`
+- **PowerShell:** `Invoke-GetOrganization`
 
 ---
 
@@ -25,8 +25,8 @@ Total: 26 endpoints
 **Description:** List the actions on a Workspace
 
 **Functions:**
-- **Bash:** `trello_get_actions_for_organization`
-- **PowerShell:** `Invoke-TrelloGetActionsForOrganization`
+- **Bash:** `get_actions_for_organization`
+- **PowerShell:** `Invoke-GetActionsForOrganization`
 
 **Parameters:**
 
@@ -45,8 +45,8 @@ Total: 26 endpoints
 **Description:** List the boards in a Workspace
 
 **Functions:**
-- **Bash:** `trello_get_boards_in_organization`
-- **PowerShell:** `Invoke-TrelloGetBoardsInOrganization`
+- **Bash:** `get_boards_in_organization`
+- **PowerShell:** `Invoke-GetBoardsInOrganization`
 
 **Parameters:**
 
@@ -67,8 +67,8 @@ Total: 26 endpoints
 **Description:** Retrieve the exports that exist for the given organization
 
 **Functions:**
-- **Bash:** `trello_retrieve_organizations_exports`
-- **PowerShell:** `Invoke-TrelloRetrieveOrganizationsExports`
+- **Bash:** `retrieve_organizations_exports`
+- **PowerShell:** `Invoke-RetrieveOrganizationsExports`
 
 ---
 
@@ -81,8 +81,8 @@ Total: 26 endpoints
 **Description:** List the members in a Workspace
 
 **Functions:**
-- **Bash:** `trello_get_members_organization`
-- **PowerShell:** `Invoke-TrelloGetMembersOrganization`
+- **Bash:** `get_members_organization`
+- **PowerShell:** `Invoke-GetMembersOrganization`
 
 **Parameters:**
 
@@ -101,8 +101,8 @@ Total: 26 endpoints
 **Description:** List the memberships of a Workspace
 
 **Functions:**
-- **Bash:** `trello_get_memberships_organization`
-- **PowerShell:** `Invoke-TrelloGetMembershipsOrganization`
+- **Bash:** `get_memberships_organization`
+- **PowerShell:** `Invoke-GetMembershipsOrganization`
 
 **Parameters:**
 
@@ -123,8 +123,8 @@ Total: 26 endpoints
 **Description:** Get a single Membership for an Organization
 
 **Functions:**
-- **Bash:** `trello_get_membership_organization`
-- **PowerShell:** `Invoke-TrelloGetMembershipOrganization`
+- **Bash:** `get_membership_organization`
+- **PowerShell:** `Invoke-GetMembershipOrganization`
 
 **Parameters:**
 
@@ -145,8 +145,8 @@ Total: 26 endpoints
 **Description:** Used to check whether the given board has new billable guests on it.
 
 **Functions:**
-- **Bash:** `trello_get_organizations_new_billable_guests`
-- **PowerShell:** `Invoke-TrelloGetOrganizationsNewBillableGuests`
+- **Bash:** `get_organizations_new_billable_guests`
+- **PowerShell:** `Invoke-GetOrganizationsNewBillableGuests`
 
 **Parameters:**
 
@@ -166,8 +166,8 @@ Total: 26 endpoints
 **Description:** Get organization scoped pluginData on this Workspace
 
 **Functions:**
-- **Bash:** `trello_get_plugindata_scoped_to_organization`
-- **PowerShell:** `Invoke-TrelloGetPlugindataScopedToOrganization`
+- **Bash:** `get_plugindata_scoped_to_organization`
+- **PowerShell:** `Invoke-GetPlugindataScopedToOrganization`
 
 **Parameters:**
 
@@ -186,8 +186,8 @@ Total: 26 endpoints
 **Description:** List the organization's collections
 
 **Functions:**
-- **Bash:** `trello_get_tags_organization`
-- **PowerShell:** `Invoke-TrelloGetTagsOrganization`
+- **Bash:** `get_tags_organization`
+- **PowerShell:** `Invoke-GetTagsOrganization`
 
 ---
 
@@ -198,8 +198,8 @@ Total: 26 endpoints
 **Endpoint:** `GET /organizations/{id}/{field}`
 
 **Functions:**
-- **Bash:** `trello_get_field_on_organization`
-- **PowerShell:** `Invoke-TrelloGetFieldOnOrganization`
+- **Bash:** `get_field_on_organization`
+- **PowerShell:** `Invoke-GetFieldOnOrganization`
 
 **Parameters:**
 
@@ -221,8 +221,8 @@ Total: 26 endpoints
 **Description:** Create a new Workspace
 
 **Functions:**
-- **Bash:** `trello_create_new_organization`
-- **PowerShell:** `Invoke-TrelloCreateNewOrganization`
+- **Bash:** `create_new_organization`
+- **PowerShell:** `Invoke-CreateNewOrganization`
 
 **Parameters:**
 
@@ -244,8 +244,8 @@ Total: 26 endpoints
 **Description:** Kick off CSV export for an organization
 
 **Functions:**
-- **Bash:** `trello_create_export_for_organizations`
-- **PowerShell:** `Invoke-TrelloCreateExportForOrganizations`
+- **Bash:** `create_export_for_organizations`
+- **PowerShell:** `Invoke-CreateExportForOrganizations`
 
 **Parameters:**
 
@@ -264,8 +264,8 @@ Total: 26 endpoints
 **Description:** Set the logo image for a Workspace
 
 **Functions:**
-- **Bash:** `trello_update_logo_for_organization`
-- **PowerShell:** `Invoke-TrelloUpdateLogoForOrganization`
+- **Bash:** `update_logo_for_organization`
+- **PowerShell:** `Invoke-UpdateLogoForOrganization`
 
 **Parameters:**
 
@@ -285,8 +285,8 @@ Total: 26 endpoints
 **Description:** Create a Tag in an Organization
 
 **Functions:**
-- **Bash:** `trello_create_tag_in_organization`
-- **PowerShell:** `Invoke-TrelloCreateTagInOrganization`
+- **Bash:** `create_tag_in_organization`
+- **PowerShell:** `Invoke-CreateTagInOrganization`
 
 ---
 
@@ -301,8 +301,8 @@ Total: 26 endpoints
 **Description:** Update an organization
 
 **Functions:**
-- **Bash:** `trello_update_organization`
-- **PowerShell:** `Invoke-TrelloUpdateOrganization`
+- **Bash:** `update_organization`
+- **PowerShell:** `Invoke-UpdateOrganization`
 
 **Parameters:**
 
@@ -330,8 +330,8 @@ Total: 26 endpoints
 **Endpoint:** `PUT /organizations/{id}/members`
 
 **Functions:**
-- **Bash:** `trello_update_organizations_members`
-- **PowerShell:** `Invoke-TrelloUpdateOrganizationsMembers`
+- **Bash:** `update_organizations_members`
+- **PowerShell:** `Invoke-UpdateOrganizationsMembers`
 
 **Parameters:**
 
@@ -353,8 +353,8 @@ Total: 26 endpoints
 **Description:** Add a member to a Workspace or update their member type.
 
 **Functions:**
-- **Bash:** `trello_update_member_organization`
-- **PowerShell:** `Invoke-TrelloUpdateMemberOrganization`
+- **Bash:** `update_member_organization`
+- **PowerShell:** `Invoke-UpdateMemberOrganization`
 
 **Parameters:**
 
@@ -375,8 +375,8 @@ Total: 26 endpoints
 **Description:** Deactivate or reactivate a member of a Workspace
 
 **Functions:**
-- **Bash:** `trello_deactivate_or_reactivate_member_organization`
-- **PowerShell:** `Invoke-TrelloDeactivateOrReactivateMemberOrganization`
+- **Bash:** `deactivate_or_reactivate_member_organization`
+- **PowerShell:** `Invoke-DeactivateOrReactivateMemberOrganization`
 
 **Parameters:**
 
@@ -397,8 +397,8 @@ Total: 26 endpoints
 **Endpoint:** `DELETE /organizations/{id}`
 
 **Functions:**
-- **Bash:** `trello_delete_organization`
-- **PowerShell:** `Invoke-TrelloDeleteOrganization`
+- **Bash:** `delete_organization`
+- **PowerShell:** `Invoke-DeleteOrganization`
 
 ---
 
@@ -411,8 +411,8 @@ Total: 26 endpoints
 **Description:** Delete a the logo from a Workspace
 
 **Functions:**
-- **Bash:** `trello_delete_logo_for_organization`
-- **PowerShell:** `Invoke-TrelloDeleteLogoForOrganization`
+- **Bash:** `delete_logo_for_organization`
+- **PowerShell:** `Invoke-DeleteLogoForOrganization`
 
 **Parameters:**
 
@@ -431,8 +431,8 @@ Total: 26 endpoints
 **Description:** Remove a member from a Workspace
 
 **Functions:**
-- **Bash:** `trello_remove_member_from_organization`
-- **PowerShell:** `Invoke-TrelloRemoveMemberFromOrganization`
+- **Bash:** `remove_member_from_organization`
+- **PowerShell:** `Invoke-RemoveMemberFromOrganization`
 
 **Parameters:**
 
@@ -452,8 +452,8 @@ Total: 26 endpoints
 **Description:** Remove a member from a Workspace and from all Workspace boards
 
 **Functions:**
-- **Bash:** `trello_remove_member_from_organization_and_all_organization_boards`
-- **PowerShell:** `Invoke-TrelloRemoveMemberFromOrganizationAndAllOrganizationBoards`
+- **Bash:** `remove_member_from_organization_and_all_organization_boards`
+- **PowerShell:** `Invoke-RemoveMemberFromOrganizationAndAllOrganizationBoards`
 
 **Parameters:**
 
@@ -471,8 +471,8 @@ Total: 26 endpoints
 **Endpoint:** `DELETE /organizations/{id}/prefs/associatedDomain`
 
 **Functions:**
-- **Bash:** `trello_remove_associated_google_apps_domain_from_workspace`
-- **PowerShell:** `Invoke-TrelloRemoveAssociatedGoogleAppsDomainFromWorkspace`
+- **Bash:** `remove_associated_google_apps_domain_from_workspace`
+- **PowerShell:** `Invoke-RemoveAssociatedGoogleAppsDomainFromWorkspace`
 
 **Parameters:**
 
@@ -491,8 +491,8 @@ Total: 26 endpoints
 **Description:** Remove the email domain restriction on who can be invited to the Workspace
 
 **Functions:**
-- **Bash:** `trello_delete_email_domain_restriction_on_who_can_be_invited_to_workspace`
-- **PowerShell:** `Invoke-TrelloDeleteEmailDomainRestrictionOnWhoCanBeInvitedToWorkspace`
+- **Bash:** `delete_email_domain_restriction_on_who_can_be_invited_to_workspace`
+- **PowerShell:** `Invoke-DeleteEmailDomainRestrictionOnWhoCanBeInvitedToWorkspace`
 
 **Parameters:**
 
@@ -511,8 +511,8 @@ Total: 26 endpoints
 **Description:** Delete an organization's tag
 
 **Functions:**
-- **Bash:** `trello_delete_organizations_tag`
-- **PowerShell:** `Invoke-TrelloDeleteOrganizationsTag`
+- **Bash:** `delete_organizations_tag`
+- **PowerShell:** `Invoke-DeleteOrganizationsTag`
 
 **Parameters:**
 

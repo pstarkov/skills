@@ -13,8 +13,8 @@ Total: 11 endpoints
 **Description:** Get information about a List
 
 **Functions:**
-- **Bash:** `trello_get_list`
-- **PowerShell:** `Invoke-TrelloGetList`
+- **Bash:** `get_list`
+- **PowerShell:** `Invoke-GetList`
 
 **Parameters:**
 
@@ -33,8 +33,8 @@ Total: 11 endpoints
 **Description:** Get the Actions on a List
 
 **Functions:**
-- **Bash:** `trello_get_actions_for_list`
-- **PowerShell:** `Invoke-TrelloGetActionsForList`
+- **Bash:** `get_actions_for_list`
+- **PowerShell:** `Invoke-GetActionsForList`
 
 **Parameters:**
 
@@ -54,8 +54,8 @@ Total: 11 endpoints
 **Description:** Get the board a list is on
 
 **Functions:**
-- **Bash:** `trello_get_board_list_is_on`
-- **PowerShell:** `Invoke-TrelloGetBoardListIsOn`
+- **Bash:** `get_board_list_is_on`
+- **PowerShell:** `Invoke-GetBoardListIsOn`
 
 **Parameters:**
 
@@ -75,8 +75,8 @@ Total: 11 endpoints
 **Description:** List the cards in a list
 
 **Functions:**
-- **Bash:** `trello_get_cards_in_list`
-- **PowerShell:** `Invoke-TrelloGetCardsInList`
+- **Bash:** `get_cards_in_list`
+- **PowerShell:** `Invoke-GetCardsInList`
 
 **Parameters:**
 
@@ -97,8 +97,8 @@ Total: 11 endpoints
 **Description:** Create a new List on a Board
 
 **Functions:**
-- **Bash:** `trello_create_new_list`
-- **PowerShell:** `Invoke-TrelloCreateNewList`
+- **Bash:** `create_new_list`
+- **PowerShell:** `Invoke-CreateNewList`
 
 **Parameters:**
 
@@ -120,8 +120,8 @@ Total: 11 endpoints
 **Description:** Archive all cards in a list
 
 **Functions:**
-- **Bash:** `trello_archive_all_cards_in_list`
-- **PowerShell:** `Invoke-TrelloArchiveAllCardsInList`
+- **Bash:** `archive_all_cards_in_list`
+- **PowerShell:** `Invoke-ArchiveAllCardsInList`
 
 **Parameters:**
 
@@ -140,8 +140,8 @@ Total: 11 endpoints
 **Description:** Move all Cards in a List
 
 **Functions:**
-- **Bash:** `trello_move_all_cards_in_list`
-- **PowerShell:** `Invoke-TrelloMoveAllCardsInList`
+- **Bash:** `move_all_cards_in_list`
+- **PowerShell:** `Invoke-MoveAllCardsInList`
 
 **Parameters:**
 
@@ -164,8 +164,8 @@ Total: 11 endpoints
 **Description:** Update the properties of a List
 
 **Functions:**
-- **Bash:** `trello_update_list`
-- **PowerShell:** `Invoke-TrelloUpdateList`
+- **Bash:** `update_list`
+- **PowerShell:** `Invoke-UpdateList`
 
 **Parameters:**
 
@@ -186,8 +186,8 @@ Total: 11 endpoints
 **Endpoint:** `PUT /lists/{id}/closed`
 
 **Functions:**
-- **Bash:** `trello_archive_or_unarchive_list`
-- **PowerShell:** `Invoke-TrelloArchiveOrUnarchiveList`
+- **Bash:** `archive_or_unarchive_list`
+- **PowerShell:** `Invoke-ArchiveOrUnarchiveList`
 
 **Parameters:**
 
@@ -207,8 +207,8 @@ Total: 11 endpoints
 **Description:** Move a List to a different Board
 
 **Functions:**
-- **Bash:** `trello_move_list_to_board`
-- **PowerShell:** `Invoke-TrelloMoveListToBoard`
+- **Bash:** `move_list_to_board`
+- **PowerShell:** `Invoke-MoveListToBoard`
 
 **Parameters:**
 
@@ -228,8 +228,8 @@ Total: 11 endpoints
 **Description:** Rename a list
 
 **Functions:**
-- **Bash:** `trello_update_field_on_list`
-- **PowerShell:** `Invoke-TrelloUpdateFieldOnList`
+- **Bash:** `update_field_on_list`
+- **PowerShell:** `Invoke-UpdateFieldOnList`
 
 **Parameters:**
 

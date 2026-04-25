@@ -11,8 +11,8 @@ Total: 1 endpoints
 **Endpoint:** `GET /emoji`
 
 **Functions:**
-- **Bash:** `trello_list_available_emoji`
-- **PowerShell:** `Invoke-TrelloListAvailableEmoji`
+- **Bash:** `list_available_emoji`
+- **PowerShell:** `Invoke-ListAvailableEmoji`
 
 **Parameters:**
 

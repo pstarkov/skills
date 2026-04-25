@@ -13,8 +13,8 @@ Total: 1 endpoints
 **Description:** Make up to 10 GET requests in a single, batched API call.
 
 **Functions:**
-- **Bash:** `trello_batch_requests`
-- **PowerShell:** `Invoke-TrelloBatchRequests`
+- **Bash:** `batch_requests`
+- **PowerShell:** `Invoke-BatchRequests`
 
 **Parameters:**
 

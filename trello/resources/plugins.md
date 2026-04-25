@@ -13,8 +13,8 @@ Total: 5 endpoints
 **Description:** Get plugins
 
 **Functions:**
-- **Bash:** `trello_get_plugin`
-- **PowerShell:** `Invoke-TrelloGetPlugin`
+- **Bash:** `get_plugin`
+- **PowerShell:** `Invoke-GetPlugin`
 
 **Parameters:**
 
@@ -31,8 +31,8 @@ Total: 5 endpoints
 **Endpoint:** `GET /plugins/{id}/compliance/memberPrivacy`
 
 **Functions:**
-- **Bash:** `trello_get_plugins_member_privacy_compliance`
-- **PowerShell:** `Invoke-TrelloGetPluginsMemberPrivacyCompliance`
+- **Bash:** `get_plugins_member_privacy_compliance`
+- **PowerShell:** `Invoke-GetPluginsMemberPrivacyCompliance`
 
 **Parameters:**
 
@@ -53,8 +53,8 @@ Total: 5 endpoints
 **Description:** Create a new listing for a given locale for your Power-Up
 
 **Functions:**
-- **Bash:** `trello_create_listing_for_plugin`
-- **PowerShell:** `Invoke-TrelloCreateListingForPlugin`
+- **Bash:** `create_listing_for_plugin`
+- **PowerShell:** `Invoke-CreateListingForPlugin`
 
 **Parameters:**
 
@@ -75,8 +75,8 @@ Total: 5 endpoints
 **Description:** Update an existing listing for your Power-Up
 
 **Functions:**
-- **Bash:** `trello_updating_plugins_listing`
-- **PowerShell:** `Invoke-TrelloUpdatingPluginsListing`
+- **Bash:** `updating_plugins_listing`
+- **PowerShell:** `Invoke-UpdatingPluginsListing`
 
 **Parameters:**
 
@@ -94,8 +94,8 @@ Total: 5 endpoints
 **Endpoint:** `PUT /plugins/{id}/`
 
 **Functions:**
-- **Bash:** `trello_update_plugin`
-- **PowerShell:** `Invoke-TrelloUpdatePlugin`
+- **Bash:** `update_plugin`
+- **PowerShell:** `Invoke-UpdatePlugin`
 
 **Parameters:**
 

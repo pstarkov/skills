@@ -13,8 +13,8 @@ Total: 39 endpoints
 **Description:** Get a card by its ID
 
 **Functions:**
-- **Bash:** `trello_get_card`
-- **PowerShell:** `Invoke-TrelloGetCard`
+- **Bash:** `get_card`
+- **PowerShell:** `Invoke-GetCard`
 
 **Parameters:**
 
@@ -50,8 +50,8 @@ Total: 39 endpoints
 **Description:** List the Actions on a Card. See [Nested Resources](/cloud/trello/guides/rest-api/nested-resources/) for more information.
 
 **Functions:**
-- **Bash:** `trello_get_actions_on_card`
-- **PowerShell:** `Invoke-TrelloGetActionsOnCard`
+- **Bash:** `get_actions_on_card`
+- **PowerShell:** `Invoke-GetActionsOnCard`
 
 **Parameters:**
 
@@ -72,8 +72,8 @@ Total: 39 endpoints
 **Description:** List the attachments on a card
 
 **Functions:**
-- **Bash:** `trello_get_attachments_on_card`
-- **PowerShell:** `Invoke-TrelloGetAttachmentsOnCard`
+- **Bash:** `get_attachments_on_card`
+- **PowerShell:** `Invoke-GetAttachmentsOnCard`
 
 **Parameters:**
 
@@ -93,8 +93,8 @@ Total: 39 endpoints
 **Description:** Get a specific Attachment on a Card.
 
 **Functions:**
-- **Bash:** `trello_get_attachment_on_card`
-- **PowerShell:** `Invoke-TrelloGetAttachmentOnCard`
+- **Bash:** `get_attachment_on_card`
+- **PowerShell:** `Invoke-GetAttachmentOnCard`
 
 **Parameters:**
 
@@ -113,8 +113,8 @@ Total: 39 endpoints
 **Description:** Get the board a card is on
 
 **Functions:**
-- **Bash:** `trello_get_board_card_is_on`
-- **PowerShell:** `Invoke-TrelloGetBoardCardIsOn`
+- **Bash:** `get_board_card_is_on`
+- **PowerShell:** `Invoke-GetBoardCardIsOn`
 
 **Parameters:**
 
@@ -134,8 +134,8 @@ Total: 39 endpoints
 **Description:** Get a specific checkItem on a card
 
 **Functions:**
-- **Bash:** `trello_get_checkitem_on_card`
-- **PowerShell:** `Invoke-TrelloGetCheckitemOnCard`
+- **Bash:** `get_checkitem_on_card`
+- **PowerShell:** `Invoke-GetCheckitemOnCard`
 
 **Parameters:**
 
@@ -154,8 +154,8 @@ Total: 39 endpoints
 **Description:** Get the completed checklist items on a card
 
 **Functions:**
-- **Bash:** `trello_get_checkitems_on_card`
-- **PowerShell:** `Invoke-TrelloGetCheckitemsOnCard`
+- **Bash:** `get_checkitems_on_card`
+- **PowerShell:** `Invoke-GetCheckitemsOnCard`
 
 **Parameters:**
 
@@ -175,8 +175,8 @@ Total: 39 endpoints
 **Description:** Get the checklists on a card
 
 **Functions:**
-- **Bash:** `trello_get_checklists_on_card`
-- **PowerShell:** `Invoke-TrelloGetChecklistsOnCard`
+- **Bash:** `get_checklists_on_card`
+- **PowerShell:** `Invoke-GetChecklistsOnCard`
 
 **Parameters:**
 
@@ -199,8 +199,8 @@ Total: 39 endpoints
 **Description:** Get the list a card is in
 
 **Functions:**
-- **Bash:** `trello_get_list_card`
-- **PowerShell:** `Invoke-TrelloGetListCard`
+- **Bash:** `get_list_card`
+- **PowerShell:** `Invoke-GetListCard`
 
 **Parameters:**
 
@@ -220,8 +220,8 @@ Total: 39 endpoints
 **Description:** Get the members on a card
 
 **Functions:**
-- **Bash:** `trello_get_members_card`
-- **PowerShell:** `Invoke-TrelloGetMembersCard`
+- **Bash:** `get_members_card`
+- **PowerShell:** `Invoke-GetMembersCard`
 
 **Parameters:**
 
@@ -241,8 +241,8 @@ Total: 39 endpoints
 **Description:** Get the members who have voted on a card
 
 **Functions:**
-- **Bash:** `trello_get_members_who_have_voted_on_card`
-- **PowerShell:** `Invoke-TrelloGetMembersWhoHaveVotedOnCard`
+- **Bash:** `get_members_who_have_voted_on_card`
+- **PowerShell:** `Invoke-GetMembersWhoHaveVotedOnCard`
 
 **Parameters:**
 
@@ -261,8 +261,8 @@ Total: 39 endpoints
 **Description:** Get any shared pluginData on a card.
 
 **Functions:**
-- **Bash:** `trello_get_plugindata_on_card`
-- **PowerShell:** `Invoke-TrelloGetPlugindataOnCard`
+- **Bash:** `get_plugindata_on_card`
+- **PowerShell:** `Invoke-GetPlugindataOnCard`
 
 **Parameters:**
 
@@ -281,8 +281,8 @@ Total: 39 endpoints
 **Description:** Get the stickers on a card
 
 **Functions:**
-- **Bash:** `trello_get_stickers_on_card`
-- **PowerShell:** `Invoke-TrelloGetStickersOnCard`
+- **Bash:** `get_stickers_on_card`
+- **PowerShell:** `Invoke-GetStickersOnCard`
 
 **Parameters:**
 
@@ -302,8 +302,8 @@ Total: 39 endpoints
 **Description:** Get a specific sticker on a card
 
 **Functions:**
-- **Bash:** `trello_get_sticker_on_card`
-- **PowerShell:** `Invoke-TrelloGetStickerOnCard`
+- **Bash:** `get_sticker_on_card`
+- **PowerShell:** `Invoke-GetStickerOnCard`
 
 **Parameters:**
 
@@ -322,8 +322,8 @@ Total: 39 endpoints
 **Description:** Get a specific property of a card
 
 **Functions:**
-- **Bash:** `trello_get_field_on_card`
-- **PowerShell:** `Invoke-TrelloGetFieldOnCard`
+- **Bash:** `get_field_on_card`
+- **PowerShell:** `Invoke-GetFieldOnCard`
 
 **Parameters:**
 
@@ -345,8 +345,8 @@ Total: 39 endpoints
 **Description:** Create a new card. Query parameters may also be replaced with a JSON request body instead.
 
 **Functions:**
-- **Bash:** `trello_create_new_card`
-- **PowerShell:** `Invoke-TrelloCreateNewCard`
+- **Bash:** `create_new_card`
+- **PowerShell:** `Invoke-CreateNewCard`
 
 **Parameters:**
 
@@ -382,8 +382,8 @@ Total: 39 endpoints
 **Description:** Add a new comment to a card
 
 **Functions:**
-- **Bash:** `trello_add_new_comment_to_card`
-- **PowerShell:** `Invoke-TrelloAddNewCommentToCard`
+- **Bash:** `add_new_comment_to_card`
+- **PowerShell:** `Invoke-AddNewCommentToCard`
 
 **Parameters:**
 
@@ -403,8 +403,8 @@ Total: 39 endpoints
 **Description:** Create an Attachment to a Card. See https://glitch.com/~trello-attachments-api for code examples. You may need to remix the project in order to view it.
 
 **Functions:**
-- **Bash:** `trello_create_attachment_on_card`
-- **PowerShell:** `Invoke-TrelloCreateAttachmentOnCard`
+- **Bash:** `create_attachment_on_card`
+- **PowerShell:** `Invoke-CreateAttachmentOnCard`
 
 **Parameters:**
 
@@ -427,8 +427,8 @@ Total: 39 endpoints
 **Description:** Create a new checklist on a card
 
 **Functions:**
-- **Bash:** `trello_create_checklist_on_card`
-- **PowerShell:** `Invoke-TrelloCreateChecklistOnCard`
+- **Bash:** `create_checklist_on_card`
+- **PowerShell:** `Invoke-CreateChecklistOnCard`
 
 **Parameters:**
 
@@ -450,8 +450,8 @@ Total: 39 endpoints
 **Description:** Add a label to a card
 
 **Functions:**
-- **Bash:** `trello_add_label_to_card`
-- **PowerShell:** `Invoke-TrelloAddLabelToCard`
+- **Bash:** `add_label_to_card`
+- **PowerShell:** `Invoke-AddLabelToCard`
 
 **Parameters:**
 
@@ -471,8 +471,8 @@ Total: 39 endpoints
 **Description:** Add a member to a card
 
 **Functions:**
-- **Bash:** `trello_add_member_to_card`
-- **PowerShell:** `Invoke-TrelloAddMemberToCard`
+- **Bash:** `add_member_to_card`
+- **PowerShell:** `Invoke-AddMemberToCard`
 
 **Parameters:**
 
@@ -492,8 +492,8 @@ Total: 39 endpoints
 **Description:** Create a new label for the board and add it to the given card.
 
 **Functions:**
-- **Bash:** `trello_create_new_label_on_card`
-- **PowerShell:** `Invoke-TrelloCreateNewLabelOnCard`
+- **Bash:** `create_new_label_on_card`
+- **PowerShell:** `Invoke-CreateNewLabelOnCard`
 
 **Parameters:**
 
@@ -514,8 +514,8 @@ Total: 39 endpoints
 **Description:** Mark notifications about this card as read
 
 **Functions:**
-- **Bash:** `trello_mark_cards_notifications_as_read`
-- **PowerShell:** `Invoke-TrelloMarkCardsNotificationsAsRead`
+- **Bash:** `mark_cards_notifications_as_read`
+- **PowerShell:** `Invoke-MarkCardsNotificationsAsRead`
 
 **Parameters:**
 
@@ -534,8 +534,8 @@ Total: 39 endpoints
 **Description:** Vote on the card for a given member.
 
 **Functions:**
-- **Bash:** `trello_add_member_vote_to_card`
-- **PowerShell:** `Invoke-TrelloAddMemberVoteToCard`
+- **Bash:** `add_member_vote_to_card`
+- **PowerShell:** `Invoke-AddMemberVoteToCard`
 
 **Parameters:**
 
@@ -554,8 +554,8 @@ Total: 39 endpoints
 **Description:** Add a sticker to a card
 
 **Functions:**
-- **Bash:** `trello_add_sticker_to_card`
-- **PowerShell:** `Invoke-TrelloAddStickerToCard`
+- **Bash:** `add_sticker_to_card`
+- **PowerShell:** `Invoke-AddStickerToCard`
 
 **Parameters:**
 
@@ -580,8 +580,8 @@ Total: 39 endpoints
 **Description:** Update an item in a checklist on a card.
 
 **Functions:**
-- **Bash:** `trello_update_checkitem_on_checklist_on_card`
-- **PowerShell:** `Invoke-TrelloUpdateCheckitemOnChecklistOnCard`
+- **Bash:** `update_checkitem_on_checklist_on_card`
+- **PowerShell:** `Invoke-UpdateCheckitemOnChecklistOnCard`
 
 **Parameters:**
 
@@ -603,8 +603,8 @@ Total: 39 endpoints
 **Description:** Update a card. Query parameters may also be replaced with a JSON request body instead.
 
 **Functions:**
-- **Bash:** `trello_update_card`
-- **PowerShell:** `Invoke-TrelloUpdateCard`
+- **Bash:** `update_card`
+- **PowerShell:** `Invoke-UpdateCard`
 
 **Parameters:**
 
@@ -639,8 +639,8 @@ Total: 39 endpoints
 **Description:** Update an existing comment
 
 **Functions:**
-- **Bash:** `trello_update_comment_action_on_card`
-- **PowerShell:** `Invoke-TrelloUpdateCommentActionOnCard`
+- **Bash:** `update_comment_action_on_card`
+- **PowerShell:** `Invoke-UpdateCommentActionOnCard`
 
 **Parameters:**
 
@@ -659,8 +659,8 @@ Total: 39 endpoints
 **Description:** Update an item in a checklist on a card.
 
 **Functions:**
-- **Bash:** `trello_update_checkitem_on_card`
-- **PowerShell:** `Invoke-TrelloUpdateCheckitemOnCard`
+- **Bash:** `update_checkitem_on_card`
+- **PowerShell:** `Invoke-UpdateCheckitemOnCard`
 
 **Parameters:**
 
@@ -685,8 +685,8 @@ Total: 39 endpoints
 **Description:** Update a sticker on a card
 
 **Functions:**
-- **Bash:** `trello_update_sticker_on_card`
-- **PowerShell:** `Invoke-TrelloUpdateStickerOnCard`
+- **Bash:** `update_sticker_on_card`
+- **PowerShell:** `Invoke-UpdateStickerOnCard`
 
 **Parameters:**
 
@@ -708,8 +708,8 @@ Total: 39 endpoints
 **Endpoint:** `DELETE /cards/{id}`
 
 **Functions:**
-- **Bash:** `trello_delete_card`
-- **PowerShell:** `Invoke-TrelloDeleteCard`
+- **Bash:** `delete_card`
+- **PowerShell:** `Invoke-DeleteCard`
 
 ---
 
@@ -722,8 +722,8 @@ Total: 39 endpoints
 **Description:** Delete a comment
 
 **Functions:**
-- **Bash:** `trello_delete_comment_on_card`
-- **PowerShell:** `Invoke-TrelloDeleteCommentOnCard`
+- **Bash:** `delete_comment_on_card`
+- **PowerShell:** `Invoke-DeleteCommentOnCard`
 
 ---
 
@@ -736,8 +736,8 @@ Total: 39 endpoints
 **Description:** Delete an Attachment
 
 **Functions:**
-- **Bash:** `trello_delete_attachment_on_card`
-- **PowerShell:** `Invoke-TrelloDeleteAttachmentOnCard`
+- **Bash:** `delete_attachment_on_card`
+- **PowerShell:** `Invoke-DeleteAttachmentOnCard`
 
 **Parameters:**
 
@@ -757,8 +757,8 @@ Total: 39 endpoints
 **Description:** Delete a checklist item
 
 **Functions:**
-- **Bash:** `trello_delete_checkitem_on_card`
-- **PowerShell:** `Invoke-TrelloDeleteCheckitemOnCard`
+- **Bash:** `delete_checkitem_on_card`
+- **PowerShell:** `Invoke-DeleteCheckitemOnCard`
 
 ---
 
@@ -771,8 +771,8 @@ Total: 39 endpoints
 **Description:** Delete a checklist from a card
 
 **Functions:**
-- **Bash:** `trello_delete_checklist_on_card`
-- **PowerShell:** `Invoke-TrelloDeleteChecklistOnCard`
+- **Bash:** `delete_checklist_on_card`
+- **PowerShell:** `Invoke-DeleteChecklistOnCard`
 
 **Parameters:**
 
@@ -792,8 +792,8 @@ Total: 39 endpoints
 **Description:** Remove a label from a card
 
 **Functions:**
-- **Bash:** `trello_remove_label_from_card`
-- **PowerShell:** `Invoke-TrelloRemoveLabelFromCard`
+- **Bash:** `remove_label_from_card`
+- **PowerShell:** `Invoke-RemoveLabelFromCard`
 
 **Parameters:**
 
@@ -813,8 +813,8 @@ Total: 39 endpoints
 **Description:** Remove a member from a card
 
 **Functions:**
-- **Bash:** `trello_remove_member_from_card`
-- **PowerShell:** `Invoke-TrelloRemoveMemberFromCard`
+- **Bash:** `remove_member_from_card`
+- **PowerShell:** `Invoke-RemoveMemberFromCard`
 
 **Parameters:**
 
@@ -834,8 +834,8 @@ Total: 39 endpoints
 **Description:** Remove a member's vote from a card
 
 **Functions:**
-- **Bash:** `trello_remove_members_vote_on_card`
-- **PowerShell:** `Invoke-TrelloRemoveMembersVoteOnCard`
+- **Bash:** `remove_members_vote_on_card`
+- **PowerShell:** `Invoke-RemoveMembersVoteOnCard`
 
 **Parameters:**
 
@@ -855,7 +855,7 @@ Total: 39 endpoints
 **Description:** Remove a sticker from the card
 
 **Functions:**
-- **Bash:** `trello_delete_sticker_on_card`
-- **PowerShell:** `Invoke-TrelloDeleteStickerOnCard`
+- **Bash:** `delete_sticker_on_card`
+- **PowerShell:** `Invoke-DeleteStickerOnCard`
 
 ---
